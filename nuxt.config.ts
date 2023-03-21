@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-  modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-icon"],
+  modules: [
+    "@pinia/nuxt",
+    "@nuxtjs/tailwindcss",
+    "@nuxt/devtools",
+    "nuxt-icon",
+  ],
   tailwindcss: {
     config: {
       content: [],
@@ -9,9 +14,13 @@ export default defineNuxtConfig({
         extend: {
           colors: {
             primary: "#29ABE2",
+            accent: "#E8871E"
           },
         },
       },
+      plugins: [
+        require("@tailwindcss/forms"),
+      ]
     },
   },
 })

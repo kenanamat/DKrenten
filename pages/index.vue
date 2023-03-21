@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { Icon } from '#components'
-
+import { Icon } from "#components"
+import HomeForm from "../components/HomeForm.vue"
 </script>
 
 <template>
   <div class="relative flex justify-center bg-slate-200 shadow-xl">
     <div class="z-10 max-w-[1440px]">
-      <div class="relative grid grid-cols-12 py-36">
+      <div class="relative grid grid-cols-12 pt-36">
         <div class="col-span-6">
           <div class="mb-12">
             <h1 class="mb-6">
@@ -34,29 +34,39 @@ import { Icon } from '#components'
         <div class="col-span-2"></div>
         <div class="col-span-4">
           <div class="rounded-3xl bg-sky-100 shadow-xl">
-            <div class="p-8">
-              <h2 class="text-3xl font-bold">Bereken je verhuiskosten!</h2>
-              <div class="mt-6">
-                <span class="flex items-center gap-4">
-                  <Icon name="material-symbols:check-circle"  size="32" class="[&>*]:fill-primary"/>
+            <div class="px-10 py-8">
+              <h2 class="text-2xl font-bold">Bereken je verhuiskosten!</h2>
+              <div class="mt-6 space-y-2">
+                <span
+                  class="flex items-center w-64 gap-2 rounded-full bg-sky-50 px-4 py-2 shadow text-sm"
+                >
+                  <Icon
+                    name="material-symbols:price-change-rounded"
+                    size="26"
+                    class="[&>*]:fill-primary"
+                  />
                   Volledig inzicht van de prijs!
                 </span>
-                <span class="flex items-center gap-4">
-                  <Icon name="material-symbols:check-circle"  size="32" class="[&>*]:fill-primary"/>
+                <span
+                  class="flex items-center w-64 gap-2 rounded-full bg-sky-50 px-4 py-2 shadow text-sm"
+                >
+                  <Icon
+                    name="material-symbols:lock-open-rounded"
+                    size="26"
+                    class="[&>*]:fill-primary"
+                  />
                   Nergens aan vast!
                 </span>
               </div>
             </div>
-            <div class="bg-white p-8 rounded-b-3xl">
-              <form action="">
-                
-              </form>
+            <div class="rounded-b-3xl bg-white px-10 py-8">
+              <HomeForm />
             </div>
           </div>
         </div>
       </div>
       <img
-        class="mb-32 w-[70%]"
+        class="mb-32 -mt-56 w-[65%]"
         src="/white-truck-trans.png"
         alt="DKrenten truck"
       />
