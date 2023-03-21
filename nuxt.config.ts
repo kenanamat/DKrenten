@@ -1,0 +1,17 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+
+export default defineNuxtConfig({
+  modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss", "@nuxt/devtools", "nuxt-icon"],
+  tailwindcss: {
+    config: {
+      content: [],
+      theme: {
+        extend: {
+          colors: {
+            primary: "#29ABE2",
+          },
+        },
+      },
+    },
+  },
+})
