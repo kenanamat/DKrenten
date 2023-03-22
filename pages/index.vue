@@ -6,7 +6,7 @@ import HomeForm from "../components/HomeForm.vue"
 <template>
   <div class="relative flex justify-center bg-slate-200 shadow-xl">
     <div class="z-10 m-10 max-w-[1440px]">
-      <div class="relative grid grid-cols-12 mt-16">
+      <div class="relative mt-16 grid grid-cols-12">
         <div class="col-span-6">
           <div class="mb-12">
             <h1 class="mb-6">
@@ -19,10 +19,11 @@ import HomeForm from "../components/HomeForm.vue"
               </span>
             </h1>
             <p class="">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste
-              quaerat placeat alias ea totam unde eum, facilis exercitationem
-              excepturi iusto consequatur molestiae officia iure reiciendis sit
-              cumque saepe quibusdam adipisci.
+              Bent u op zoek naar een betrouwbare en professionele
+              verhuisservice? Zoek niet verder! DKrenten is er om u te helpen.
+              Onze vriendelijke en behulpzame medewerkers staan klaar om uw
+              verhuizing snel en efficiënt uit te voeren. Gebruik onze tool om
+              direct inzage te krijgen over de kosten!
             </p>
           </div>
           <div class="flex gap-8">
@@ -84,7 +85,73 @@ import HomeForm from "../components/HomeForm.vue"
       style="clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%)"
     ></div>
   </div>
-  <div class="max-w-[1440px] m-10">
-
+  <div class="my-16 flex justify-center">
+    <div class="m-10 w-full max-w-[1440px]">
+      <div class="mx-auto max-w-xl text-center text-slate-600">
+        <h2 class="mb-2 text-2xl font-extrabold">Onze voordelen</h2>
+        <p>
+          Bij DKrenten profiteert u van onze uitgebreide ervaring en expertise
+          op het gebied van verhuizingen.
+        </p>
+      </div>
+      <hr class="w-80 mx-auto my-14">
+      <div class="flex flex-wrap justify-between gap-10">
+        <div class="flex h-96 w-80 flex-col rounded-3xl p-10 bg-gradient-to-b from-sky-50 to-transparent">
+          <Icon
+            name="mdi:pencil-ruler-outline"
+            size="128"
+            class="[&>*]:fill-primary self-center"
+          />
+          <h3 class="text-primary mt-8 text-lg font-bold">
+            Advies en transport op maat
+          </h3>
+          <p class="mt-2 text-sm text-slate-700">
+            Wij luisteren naar uw wensen en behoeften en bieden advies en
+            service op maat om aan al uw verwachtingen te voldoen.
+          </p>
+        </div>
+        <div class="flex h-96 w-80 flex-col rounded-3xl p-10 bg-gradient-to-b from-sky-50 to-transparent">
+          <Icon
+            name="mdi:calendar-check-outline"
+            size="128"
+            class="[&>*]:fill-primary self-center"
+          />
+          <h3 class="text-primary mt-8 text-lg font-bold">
+            7 dagen p/w beschikbaar
+          </h3>
+          <p class="mt-2 text-sm text-slate-700">
+            Of het nu gaat om een spoedklus of het sjouwen van zware meubels,
+            wij staan voor u klaar.
+          </p>
+        </div>
+        <div class="flex h-96 w-80 flex-col rounded-3xl p-10 bg-gradient-to-b from-sky-50 to-transparent">
+          <Icon
+            name="fluent:money-off-24-regular"
+            size="128"
+            class="[&>*]:fill-primary self-center"
+          />
+          <h3 class="text-primary mt-8 text-lg font-bold">
+            Geen verborgen kosten
+          </h3>
+          <p class="mt-2 text-sm text-slate-700">
+            Bij ons krijgt u een hoogwaardige service tegen een eerlijke prijs.
+          </p>
+        </div>
+        <div class="flex h-96 w-80 flex-col rounded-3xl p-10 bg-gradient-to-b from-sky-50 to-transparent">
+          <Icon
+            name="mdi:file-document-check-outline"
+            size="128"
+            class="[&>*]:fill-primary self-center"
+          />
+          <h3 class="text-primary mt-8 text-lg font-bold">
+            Goed, snel & transparant
+          </h3>
+          <p class="mt-2 text-sm text-slate-700">
+            Wij begrijpen dat verhuizen stressvol kan zijn en doen er alles aan
+            om uw verhuizing soepel te laten verlopen.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
