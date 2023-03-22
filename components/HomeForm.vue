@@ -7,11 +7,11 @@ import { Icon } from "#components"
     <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
       <div class="space-y-6 sm:space-y-5">
         <div>
-          <h3 class="text-base font-semibold leading-6 text-gray-900">
-            Personal Information
+          <h3 class="text-base font-semibold leading-6 text-gray-700">
+            Beginpunt van je verhuizing
           </h3>
           <p class="mt-1 max-w-2xl text-sm text-gray-500">
-            Use a permanent address where you can receive mail.
+            Vul hieronder in vanaf waar je wilt verhuizen.
           </p>
         </div>
         <div class="space-y-6 sm:space-y-5">
@@ -29,7 +29,7 @@ import { Icon } from "#components"
                 name="street-address"
                 id="street-address"
                 autocomplete="street-address"
-                class="block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                class="block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -48,7 +48,7 @@ import { Icon } from "#components"
                 name="city"
                 id="city"
                 autocomplete="address-level2"
-                class="block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                class="block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:max-w-xs sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -67,7 +67,7 @@ import { Icon } from "#components"
                 name="postal-code"
                 id="postal-code"
                 autocomplete="postal-code"
-                class="block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                class="block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:max-w-xs sm:text-sm sm:leading-6"
               />
             </div>
           </div>
