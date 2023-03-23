@@ -81,7 +81,7 @@ import { Icon } from "#components"
           type="submit"
           class="bg-primary hover:bg-accent text-md inline-flex items-center justify-center gap-2 rounded-md py-2 px-3 font-semibold text-white shadow-sm transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
-          Kies je dag!
+          Bekijk je opties!
           <Icon name="material-symbols:arrow-right-alt-rounded" size="26" />
         </button>
       </div>

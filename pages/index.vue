@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Icon } from "#components"
 import HomeForm from "../components/HomeForm.vue"
+import BenefitBlocks from "~~/components/BenefitBlocks.vue"
 </script>
 
 <template>
@@ -27,12 +28,14 @@ import HomeForm from "../components/HomeForm.vue"
             </p>
           </div>
           <div class="flex gap-8">
-            <button class="rounded bg-white px-6 py-4 text-lg font-bold shadow">
+            <button
+              class="rounded bg-white px-6 py-4 text-lg font-bold shadow-md"
+            >
               Bereken je verhuiskosten
             </button>
             <div class="relative flex">
               <button
-                class="bg-primary flex items-center rounded px-6 py-4 text-lg font-bold text-white shadow"
+                class="bg-primary flex items-center rounded px-6 py-4 text-lg font-bold text-white shadow-md"
               >
                 <Icon name="mdi:tow-truck" size="40" class="[&>*]:fill-white" />
                 <span class="ml-4">Zelf een verhuislift huren</span>
@@ -94,62 +97,129 @@ import HomeForm from "../components/HomeForm.vue"
           op het gebied van verhuizingen.
         </p>
       </div>
-      <hr class="w-80 mx-auto my-14">
-      <div class="flex flex-wrap justify-between gap-10">
-        <div class="flex h-96 w-80 flex-col rounded-3xl p-10 bg-gradient-to-b from-sky-50 to-transparent">
-          <Icon
-            name="mdi:pencil-ruler-outline"
-            size="128"
-            class="[&>*]:fill-primary self-center"
-          />
-          <h3 class="text-primary mt-8 text-lg font-bold">
-            Advies en transport op maat
-          </h3>
-          <p class="mt-2 text-sm text-slate-700">
-            Wij luisteren naar uw wensen en behoeften en bieden advies en
-            service op maat om aan al uw verwachtingen te voldoen.
+      <hr class="mx-auto my-14 w-80" />
+      <BenefitBlocks />
+    </div>
+  </div>
+  <div
+    class="mt-20 h-20 w-full bg-sky-100"
+    style="clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%)"
+  ></div>
+  <div class="flex justify-center bg-sky-100">
+    <div class="m-10 w-full max-w-[1440px]">
+      <div class="flex flex-wrap justify-between gap-8">
+        <div class="max-w-5xl">
+            <h2 class="text-primary text-4xl font-bold mb-4">
+              Huur een verhuislift!
+            </h2>
+          <p class="w-5/6">
+            Bij DKrenten transport kun je een verhuislift huren om zware spullen
+            gemakkelijk naar boven te verplaatsen tijdens een verhuizing. Zo
+            hoef je geen zware spullen zoals antieke kasten of wasmachines door
+            het smalle trappengat te tillen. De verhuislift wordt geleverd met
+            bemanning die je helpt bij het verplaatsen van jouw spullen en
+            ervoor zorgt dat alles goed gaat.
           </p>
+          <div class="mt-12 mb-3 flex items-center gap-2">
+            <Icon
+              name="material-symbols:nest-clock-farsight-analog-outline-rounded"
+              size="32"
+              class="[&>*]:fill-primary"
+            />
+            <h3 class="text-primary text-2xl font-bold">
+              Hoelang heb ik een verhuislift nodig?
+            </h3>
+          </div>
+          <p class="w-5/6">
+            Bij DKrenten transport huur je gemakkelijk een verhuislift voor
+            alleen hetgeen dat jij nodig hebt. Bij ons hoef je niet onnodig de
+            hele dag de lift te huren, jij bepaald!
+          </p>
+          <ul class="mt-10 space-y-6">
+            <li
+              class="flex items-center gap-6 rounded-full bg-sky-50 px-6 py-3 shadow-md"
+            >
+              <h4 class="min-w-max text-lg font-bold">1 uur service:</h4>
+              <p class="">
+                Meer dan genoeg tijd om +- 10 tot 12 objecten (10m3) naar boven
+                te verhuizen. Dit is vergelijkbaar met een vol busje (PostNL
+                formaat)
+              </p>
+            </li>
+            <li
+              class="flex items-center gap-6 rounded-full bg-sky-50 px-6 py-3 shadow-md"
+            >
+              <h4 class="min-w-max text-lg font-bold">2 uur service:</h4>
+              <p class="">
+                Ideaal als je +- 20 m3 wilt liften. Dit is vergelijkbaar met een
+                grotere bakwagen.
+              </p>
+            </li>
+            <li
+              class="flex items-center gap-6 rounded-full bg-sky-50 px-6 py-3 shadow-md"
+            >
+              <h4 class="min-w-max text-lg font-bold">3-4 uur service:</h4>
+              <p class="">
+                Noodzakelijk als je meer dan 25m3 naar boven moet verhuizen
+                en/of op 2 locaties de verhuislift wilt inzetten.
+              </p>
+            </li>
+          </ul>
         </div>
-        <div class="flex h-96 w-80 flex-col rounded-3xl p-10 bg-gradient-to-b from-sky-50 to-transparent">
-          <Icon
-            name="mdi:calendar-check-outline"
-            size="128"
-            class="[&>*]:fill-primary self-center"
-          />
-          <h3 class="text-primary mt-8 text-lg font-bold">
-            7 dagen p/w beschikbaar
+        <div class="">
+          <h3 class="mb-6 mt-4 text-lg font-bold">
+            Verhuislift kan je gebruiken voor:
           </h3>
-          <p class="mt-2 text-sm text-slate-700">
-            Of het nu gaat om een spoedklus of het sjouwen van zware meubels,
-            wij staan voor u klaar.
-          </p>
-        </div>
-        <div class="flex h-96 w-80 flex-col rounded-3xl p-10 bg-gradient-to-b from-sky-50 to-transparent">
-          <Icon
-            name="fluent:money-off-24-regular"
-            size="128"
-            class="[&>*]:fill-primary self-center"
-          />
-          <h3 class="text-primary mt-8 text-lg font-bold">
-            Geen verborgen kosten
-          </h3>
-          <p class="mt-2 text-sm text-slate-700">
-            Bij ons krijgt u een hoogwaardige service tegen een eerlijke prijs.
-          </p>
-        </div>
-        <div class="flex h-96 w-80 flex-col rounded-3xl p-10 bg-gradient-to-b from-sky-50 to-transparent">
-          <Icon
-            name="mdi:file-document-check-outline"
-            size="128"
-            class="[&>*]:fill-primary self-center"
-          />
-          <h3 class="text-primary mt-8 text-lg font-bold">
-            Goed, snel & transparant
-          </h3>
-          <p class="mt-2 text-sm text-slate-700">
-            Wij begrijpen dat verhuizen stressvol kan zijn en doen er alles aan
-            om uw verhuizing soepel te laten verlopen.
-          </p>
+          <div class="grid grid-cols-2 grid-rows-2 gap-8">
+            <div
+              class="h-30 w-30 bg-primary flex flex-col rounded-xl p-4 shadow-md"
+            >
+              <Icon
+                name="mdi:truck-fast"
+                size="80"
+                class="self-center [&>*]:fill-sky-100"
+              />
+              <span class="mt-2 text-center font-extrabold text-white">
+                Verhuizen
+              </span>
+            </div>
+            <div
+              class="h-30 w-30 bg-primary flex flex-col rounded-xl p-4 shadow-md"
+            >
+              <Icon
+                name="carbon:solar-panel"
+                size="80"
+                class="self-center [&>*]:fill-sky-100"
+              />
+              <span class="mt-2 text-center font-extrabold text-white">
+                Zonnepanelen
+              </span>
+            </div>
+            <div
+              class="h-30 w-30 bg-primary flex flex-col rounded-xl p-4 shadow-md"
+            >
+              <Icon
+                name="mdi:washing-machine"
+                size="80"
+                class="self-center [&>*]:fill-sky-100"
+              />
+              <span class="mt-2 text-center font-extrabold text-white">
+                Witgoed
+              </span>
+            </div>
+            <div
+              class="h-30 w-30 bg-primary flex flex-col rounded-xl p-4 shadow-md"
+            >
+              <Icon
+                name="map:furniture-store"
+                size="80"
+                class="self-center [&>*]:fill-sky-100"
+              />
+              <span class="mt-2 text-center font-extrabold text-white">
+                Meubels
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

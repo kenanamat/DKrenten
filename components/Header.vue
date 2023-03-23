@@ -9,7 +9,7 @@ onMounted(() => {
 <template>
   <header
     class="sticky top-0 z-50 grid grid-cols-3 bg-slate-200 transition-all duration-300"
-    :class="{ ' bg-white shadow': scroll > 0 }"
+    :class="{ ' bg-white shadow-md': scroll > 0 }"
   >
     <div class="col-auto p-8">
       <img src="/logo.png" alt="Logo DKrenten" class="w-48" />
