@@ -227,7 +227,7 @@ const selectedRent = ref("lift")
     </div>
   </div>
   <div
-    class="h-20 w-full bg-sky-100"
+    class="-mt-1 h-20 w-full bg-sky-100"
     style="clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%)"
   ></div>
   <div class="flex justify-center">
@@ -248,7 +248,7 @@ const selectedRent = ref("lift")
             >
               <img
                 class="max-h-32 w-full"
-                src="~/public/verhuislift.png"
+                src="/verhuislift.png"
                 alt="Verhuislift"
               />
               <span class="mt-2 font-bold">Meubel lift</span>
@@ -262,7 +262,7 @@ const selectedRent = ref("lift")
             >
               <img
                 class="max-h-24"
-                src="~/public/verhuisliftaanhang.jpg"
+                src="/verhuisliftaanhang.jpg"
                 alt="Aanhangwagen"
               />
               <span class="font-bold">Aanhanger lift</span>
@@ -519,4 +519,5 @@ const selectedRent = ref("lift")
       </div>
     </div>
   </div>
+  <iframe frameborder="1" allowtransparency="true" src="https://www.klantenvertellen.nl/retrieve-widget.html?color=white&allowTransparency=false&button=true&lang=nl&tenantId=99&locationId=1068031" width="400" height="222"></iframe>
 </template>

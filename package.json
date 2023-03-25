@@ -5,7 +5,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "firebase deploy",
+    "init": "firebase init"
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.2.5",
@@ -16,9 +18,14 @@
     "prettier-plugin-tailwindcss": "^0.2.5"
   },
   "dependencies": {
+    "@firebase/app-types": "^0.9.0",
     "@heroicons/vue": "^2.0.16",
     "@pinia/nuxt": "^0.4.7",
     "@tailwindcss/forms": "^0.5.3",
-    "pinia": "^2.0.33"
+    "firebase": "^9.18.0",
+    "firebase-admin": "^11.5.0",
+    "nuxt-vuefire": "^0.1.6",
+    "pinia": "^2.0.33",
+    "vuefire": "^3.1.0"
   }
 }

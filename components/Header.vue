@@ -12,11 +12,23 @@ onMounted(() => {
     :class="{ ' bg-white shadow-md': scroll > 0 }"
   >
     <div class="col-auto p-8">
-      <img src="/logo.png" alt="Logo DKrenten" class="w-48" />
+      <NuxtLink to="/">
+        <img src="/logo.png" alt="Logo DKrenten" class="w-48" />
+      </NuxtLink>
     </div>
     <div class="col-auto flex items-center justify-center text-lg font-bold">
-      <a
-        href="#"
+      <NuxtLink
+        to="/"
+        class="flex h-full items-center px-10 transition-all duration-300"
+        :class="{
+          'hover:bg-primary bg-white hover:text-white': scroll > 0,
+          'hover:text-primary bg-slate-200 hover:bg-white': scroll === 0,
+        }"
+      >
+        Verhuislift
+      </NuxtLink>
+      <NuxtLink
+        to="/"
         class="flex h-full items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
@@ -24,19 +36,9 @@ onMounted(() => {
         }"
       >
         Verhuizen
-      </a>
-      <a
-        href="#"
-        class="flex h-full items-center px-10 transition-all duration-300"
-        :class="{
-          'hover:bg-primary bg-white hover:text-white': scroll > 0,
-          'hover:text-primary bg-slate-200 hover:bg-white': scroll === 0,
-        }"
-      >
-        Verhuisift
-      </a>
-      <a
-        href="#"
+      </NuxtLink>
+      <NuxtLink
+        to="/"
         class="flex h-full items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
@@ -44,9 +46,9 @@ onMounted(() => {
         }"
       >
         Transport
-      </a>
-      <a
-        href="#"
+      </NuxtLink>
+      <NuxtLink
+        to="/"
         class="flex h-full items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
@@ -54,7 +56,7 @@ onMounted(() => {
         }"
       >
         Contact
-      </a>
+      </NuxtLink>
     </div>
     <div class="col-auto flex items-center justify-end p-8">
       <button
