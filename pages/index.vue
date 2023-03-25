@@ -9,16 +9,16 @@ const selectedRent = ref("lift")
 <template>
   <div class="relative flex justify-center bg-slate-200 shadow-xl">
     <div class="z-10 m-10 max-w-[1440px]">
-      <div class="relative mt-16 grid grid-cols-12">
-        <div class="col-span-6">
+      <div class="relative mt-16 grid gap-16 lg:grid-cols-5 xl:grid-cols-12">
+        <div class="lg:col-span-3 xl:col-span-6">
           <div class="mb-12">
             <h1 class="mb-6">
               <span class="text-2xl font-bold">
-                Wij adviseren, jij bepaald
+                Zware of te grote spullen omhoog?
               </span>
               <br />
               <span class="text-5xl font-bold">
-                Onze service stel je zelf samen
+                Goedkoop met een verhuislift!
               </span>
             </h1>
             <p class="">
@@ -29,11 +29,11 @@ const selectedRent = ref("lift")
               direct inzage te krijgen over de kosten!
             </p>
           </div>
-          <div class="flex gap-8">
+          <div class="flex flex-wrap gap-8">
             <button
               class="rounded bg-white px-6 py-4 text-lg font-bold shadow-md"
             >
-              Bereken je verhuiskosten
+              Algehele verhuisservice
             </button>
             <div class="relative flex">
               <button
@@ -45,11 +45,11 @@ const selectedRent = ref("lift")
             </div>
           </div>
         </div>
-        <div class="col-span-2"></div>
-        <div class="col-span-4">
+        <div class="col-span-2 hidden xl:block"></div>
+        <div class="lg:col-span-2 xl:col-span-4">
           <div class="rounded-3xl bg-sky-100 shadow-xl">
             <div class="px-10 py-8">
-              <h2 class="text-2xl font-bold">Bereken je verhuiskosten!</h2>
+              <h2 class="text-2xl font-bold">Gemakkelijk een verhuislift!</h2>
               <div class="mt-6 space-y-2">
                 <span
                   class="flex w-64 items-center gap-2 rounded-full bg-sky-50 px-4 py-2 text-sm shadow"
@@ -77,10 +77,20 @@ const selectedRent = ref("lift")
               <HomeForm />
             </div>
           </div>
+          <iframe
+            title="beoordeling"
+            id="rating"
+            frameborder="1"
+            allowtransparency="true"
+            src="https://www.klantenvertellen.nl/retrieve-widget.html?color=white&allowTransparency=false&button=true&lang=nl&tenantId=99&locationId=1068031"
+            width="400"
+            height="222"
+            class="w-full mt-10"
+          ></iframe>
         </div>
       </div>
       <img
-        class="mb-32 -mt-56 w-[65%]"
+        class="my-20 md:w-[65%] lg:mb-32 lg:-mt-[29rem]"
         src="/white-truck-trans.png"
         alt="DKrenten truck"
       />
@@ -237,9 +247,9 @@ const selectedRent = ref("lift")
       </div>
       <hr class="mx-auto mt-8 mb-20 w-80" />
       <div class="mb-24">
-        <div class="flex justify-between gap-32 flex-wrap">
+        <div class="flex flex-wrap justify-between gap-32">
           <div
-            class="mx-auto flex flex-grow justify-between border-2 bg-slate-50 h-36"
+            class="mx-auto flex h-36 flex-grow justify-between border-2 bg-slate-50"
           >
             <button
               class="flex w-44 flex-col items-center justify-center border-2 bg-white transition-all"
@@ -273,7 +283,7 @@ const selectedRent = ref("lift")
               class="grid w-32 grid-rows-2 items-center justify-center rounded-xl bg-slate-200 p-4 shadow-md"
             >
               <Icon name="mdi:leaf" size="32" class="mx-auto" />
-              <h3 class="font-bold text-center">Milieu bewust</h3>
+              <h3 class="text-center font-bold">Milieu bewust</h3>
             </li>
             <li
               class="grid w-32 grid-rows-2 items-center justify-center rounded-xl bg-slate-200 p-4 shadow-md"
@@ -283,19 +293,19 @@ const selectedRent = ref("lift")
                 size="32"
                 class="mx-auto"
               />
-              <h3 class="font-bold text-center">Inclusief operator</h3>
+              <h3 class="text-center font-bold">Inclusief operator</h3>
             </li>
             <li
               class="grid w-32 grid-rows-2 items-center justify-center rounded-xl bg-slate-200 p-4 shadow-md"
             >
               <Icon name="mdi:clock-fast" size="32" class="mx-auto" />
-              <h3 class="font-bold text-center">Met spoed mogelijk</h3>
+              <h3 class="text-center font-bold">Met spoed mogelijk</h3>
             </li>
             <li
               class="grid w-32 grid-rows-2 items-center justify-center rounded-xl bg-slate-200 p-4 shadow-md"
             >
               <Icon name="mdi:calendar-check" size="32" class="mx-auto" />
-              <h3 class="font-bold text-center">7 dagen per week</h3>
+              <h3 class="text-center font-bold">7 dagen per week</h3>
             </li>
           </ul>
         </div>
@@ -519,5 +529,4 @@ const selectedRent = ref("lift")
       </div>
     </div>
   </div>
-  <iframe frameborder="1" allowtransparency="true" src="https://www.klantenvertellen.nl/retrieve-widget.html?color=white&allowTransparency=false&button=true&lang=nl&tenantId=99&locationId=1068031" width="400" height="222"></iframe>
 </template>

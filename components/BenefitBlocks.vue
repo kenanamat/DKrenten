@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap justify-between gap-10">
+  <div class="flex flex-wrap justify-center md:justify-between gap-10">
     <div
       class="flex h-96 w-80 flex-col rounded-3xl bg-gradient-to-b from-sky-50 to-transparent p-10"
     >

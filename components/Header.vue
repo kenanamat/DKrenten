@@ -24,11 +24,12 @@ onMounted(() => {
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
           'hover:text-primary bg-slate-200 hover:bg-white': scroll === 0,
         }"
+        active-class="border-b-4 border-primary pt-2"
       >
         Verhuislift
       </NuxtLink>
       <NuxtLink
-        to="/"
+        to="/verhuisservice"
         class="flex h-full items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
@@ -38,7 +39,7 @@ onMounted(() => {
         Verhuizen
       </NuxtLink>
       <NuxtLink
-        to="/"
+        to="/transport"
         class="flex h-full items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
@@ -48,7 +49,7 @@ onMounted(() => {
         Transport
       </NuxtLink>
       <NuxtLink
-        to="/"
+        to="/contact"
         class="flex h-full items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
@@ -62,7 +63,7 @@ onMounted(() => {
       <button
         class="bg-primary flex items-center gap-4 rounded px-8 py-6 text-lg font-bold text-white shadow"
       >
-        <span>Verhuiskosten berekenen</span>
+        <span>Verhuislift huren!</span>
         <Icon name="material-symbols:arrow-right-alt-rounded" size="26" />
       </button>
     </div>
