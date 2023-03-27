@@ -22,9 +22,9 @@ onMounted(() => {
         class="flex h-full items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
-          'hover:text-primary bg-slate-200 hover:bg-white': scroll === 0,
+          'hover:text-primary bg-slate-200 hover:bg-slate-100': scroll === 0,
         }"
-        active-class="border-b-4 border-primary pt-2"
+        active-class="border-b-4 border-primary pt-2 !bg-white !text-slate-900"
       >
         Verhuislift
       </NuxtLink>
@@ -33,8 +33,9 @@ onMounted(() => {
         class="flex h-full items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
-          'hover:text-primary bg-slate-200 hover:bg-white': scroll === 0,
+          'hover:text-primary bg-slate-200 hover:bg-slate-100': scroll === 0,
         }"
+        active-class="border-b-4 border-primary pt-2 !bg-white !text-slate-900"
       >
         Verhuizen
       </NuxtLink>
@@ -43,8 +44,9 @@ onMounted(() => {
         class="flex h-full items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
-          'hover:text-primary bg-slate-200 hover:bg-white': scroll === 0,
+          'hover:text-primary bg-slate-200 hover:bg-slate-100': scroll === 0,
         }"
+        active-class="border-b-4 border-primary pt-2 !bg-white !text-slate-900"
       >
         Transport
       </NuxtLink>
@@ -53,8 +55,9 @@ onMounted(() => {
         class="flex h-full items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
-          'hover:text-primary bg-slate-200 hover:bg-white': scroll === 0,
+          'hover:text-primary bg-slate-200 hover:bg-slate-100': scroll === 0,
         }"
+        active-class="border-b-4 border-primary pt-2 !bg-white !text-slate-900"
       >
         Contact
       </NuxtLink>

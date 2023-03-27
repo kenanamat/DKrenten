@@ -40,7 +40,7 @@ const selectedRent = ref("lift")
                 class="bg-primary flex items-center rounded px-6 py-4 text-lg font-bold text-white shadow-md"
               >
                 <Icon name="mdi:tow-truck" size="40" class="[&>*]:fill-white" />
-                <span class="ml-4">Zelf een verhuislift huren</span>
+                <span class="ml-4">Een verhuislift huren (inc. operator)</span>
               </button>
             </div>
           </div>
