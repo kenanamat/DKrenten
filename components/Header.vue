@@ -19,45 +19,45 @@ onMounted(() => {
     <div class="col-auto flex items-center justify-center text-lg font-bold">
       <NuxtLink
         to="/"
-        class="flex h-full items-center px-10 transition-all duration-300"
+        class="flex h-full border-primary items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
           'hover:text-primary bg-slate-200 hover:bg-slate-100': scroll === 0,
         }"
-        active-class="border-b-4 border-primary pt-2 !bg-white !text-slate-900"
+        active-class="border-b-4 pt-2 !bg-white !text-slate-900"
       >
         Verhuislift
       </NuxtLink>
       <NuxtLink
         to="/verhuisservice"
-        class="flex h-full items-center px-10 transition-all duration-300"
+        class="flex h-full border-primary items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
           'hover:text-primary bg-slate-200 hover:bg-slate-100': scroll === 0,
         }"
-        active-class="border-b-4 border-primary pt-2 !bg-white !text-slate-900"
+        active-class="border-b-4 pt-2 !bg-white !text-slate-900"
       >
         Verhuizen
       </NuxtLink>
       <NuxtLink
         to="/transport"
-        class="flex h-full items-center px-10 transition-all duration-300"
+        class="flex h-full border-primary items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
           'hover:text-primary bg-slate-200 hover:bg-slate-100': scroll === 0,
         }"
-        active-class="border-b-4 border-primary pt-2 !bg-white !text-slate-900"
+        active-class="border-b-4 pt-2 !bg-white !text-slate-900"
       >
         Transport
       </NuxtLink>
       <NuxtLink
         to="/contact"
-        class="flex h-full items-center px-10 transition-all duration-300"
+        class="flex h-full border-primary items-center px-10 transition-all duration-300"
         :class="{
           'hover:bg-primary bg-white hover:text-white': scroll > 0,
           'hover:text-primary bg-slate-200 hover:bg-slate-100': scroll === 0,
         }"
-        active-class="border-b-4 border-primary pt-2 !bg-white !text-slate-900"
+        active-class="border-b-4 pt-2 !bg-white !text-slate-900"
       >
         Contact
       </NuxtLink>
