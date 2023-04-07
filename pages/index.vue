@@ -2,6 +2,7 @@
 import { Icon } from "#components"
 import HomeForm from "../components/HomeForm.vue"
 import BenefitBlocks from "~~/components/BenefitBlocks.vue"
+import PriceBlock from "~~/components/PriceBlock.vue"
 
 const selectedRent = ref("lift")
 </script>
@@ -119,7 +120,7 @@ const selectedRent = ref("lift")
   ></div>
   <div class="flex justify-center bg-sky-100">
     <div class="m-10 w-full max-w-[1440px]">
-      <div class="grid lg:grid-cols-12 items-center justify-between gap-20">
+      <div class="grid items-center justify-between gap-20 lg:grid-cols-12">
         <div class="col-span-8">
           <h2 class="text-primary mb-4 text-4xl font-bold">
             Huur een verhuislift!
@@ -137,27 +138,27 @@ const selectedRent = ref("lift")
               Een verhuislift kan je gebruiken voor:
             </h3>
             <div class="flex flex-wrap gap-10">
-              <div class="flex max-w-36 flex-col items-center justify-end gap-4 bg-sky-50 shadow-md rounded-xl p-6 pb-3">
+              <div
+                class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
+              >
                 <img class="" src="/truck.png" alt="Verhuizen" />
                 <span class="text-center text-xl font-bold">Verhuizen</span>
               </div>
-              <div class="flex max-w-36 flex-col items-center justify-end gap-4 bg-sky-50 shadow-md rounded-xl p-6 pb-3">
-                <img
-                  class=""
-                  src="/solar.png"
-                  alt="Zonnepanelen"
-                />
+              <div
+                class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
+              >
+                <img class="" src="/solar.png" alt="Zonnepanelen" />
                 <span class="text-center text-xl font-bold">Zonnepanelen</span>
               </div>
-              <div class="flex max-w-36 flex-col items-center justify-end gap-4 bg-sky-50 shadow-md rounded-xl p-6 pb-3">
-                <img
-                  class=""
-                  src="/washing-machine.png"
-                  alt="Witgoed"
-                />
+              <div
+                class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
+              >
+                <img class="" src="/washing-machine.png" alt="Witgoed" />
                 <span class="text-center text-xl font-bold">Witgoed</span>
               </div>
-              <div class="flex max-w-36 flex-col items-center justify-end gap-4 bg-sky-50 shadow-md rounded-xl p-6 pb-3">
+              <div
+                class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
+              >
                 <img class="" src="/wardrobe.png" alt="Meubels" />
                 <span class="text-center text-xl font-bold">Meubels</span>
               </div>
@@ -293,222 +294,103 @@ const selectedRent = ref("lift")
             </li>
           </ul>
         </div>
-        <div
-          class="mt-24 grid grid-cols-4 gap-10"
-          v-if="selectedRent === 'lift'"
-        >
-          <div
-            class="to-primary relative rounded-xl border bg-gradient-to-b from-sky-300 p-10 shadow-md"
-          >
-            <span
-              class="absolute top-4 right-4 rounded-full bg-sky-50 px-4 py-2 text-xs font-bold text-sky-800 shadow-md"
-            >
-              Meest gekozen
-            </span>
-            <h3 class="flex items-center gap-1 text-xl font-bold text-white">
-              <Icon name="mingcute:stopwatch-line" size="20" />
-              <span>Snel service</span>
-            </h3>
-            <span class="text-white">Inclusief operator</span>
+        <div>
+          <div>
             <div
-              class="my-10 flex items-center gap-4 font-extrabold text-white"
+              class="mt-24 grid grid-cols-4 gap-10"
+              v-if="selectedRent === 'lift'"
             >
-              <span class="text-4xl text-sky-100">€</span>
-              <span class="text-7xl">90</span>
+              <PriceBlock
+                title="Snel service"
+                highlight
+                :price="90"
+                :possibilities="[
+                  '3 objecten / 30 minuten',
+                  'Tot en met 9e etage',
+                  'Inclusief operator',
+                ]"
+              />
+              <PriceBlock
+                title="1 uur service"
+                :price="110"
+                :possibilities="[
+                  '± 10 tot 12 objecten (10m3)',
+                  'Vergelijkbaar met vol busje (PostNL formaat)',
+                  'Tot en met 9e etage',
+                  'Inclusief operator',
+                ]"
+                icon="material-symbols:clock-loader-10"
+              />
+              <PriceBlock
+                title="2 uur service"
+                :price="179"
+                :possibilities="[
+                  '± 20 tot 24 objecten (20m3)',
+                  'Vergelijkbaar met grotere bakwagen',
+                  'Tot en met 9e etage',
+                  'Inclusief operator',
+                ]"
+                icon="material-symbols:clock-loader-40"
+              />
+              <PriceBlock
+                title="3 - 4 uur service"
+                :price="265"
+                :possibilities="[
+                  'Noodzakelijk bij +24 objecten (25m3)',
+                  'Noodzakelijk als je op 2 locaties de verhuislift inzet',
+                  'Tot en met 9e etage',
+                  'Inclusief operator',
+                ]"
+                icon="material-symbols:clock-loader-90"
+              />
             </div>
-            <button
-              class="mb-6 w-full rounded-xl bg-sky-800 p-3 text-xl font-bold text-slate-100 shadow-md"
-            >
-              Huur de service
-            </button>
-            <div class="text-white">
-              <h4 class="mb-2 font-bold">Mogelijkheden:</h4>
-              <ul class="ml-5 list-disc space-y-2">
-                <li>3 objecten / 30 minuten</li>
-                <li>Tot en met 9e etage</li>
-                <li>Inclusief operator</li>
-              </ul>
+            <div class="mt-24 grid grid-cols-4 gap-10" v-else>
+              <PriceBlock
+                highlight
+                title="Snel service"
+                :price="105"
+                :possibilities="[
+                  '3 objecten / 30 minuten',
+                  'Tot en met 9e etage',
+                  'Inclusief operator',
+                ]"
+              />
+              <PriceBlock
+                title="1 uur service"
+                :price="125"
+                :possibilities="[
+                  '± 10 tot 12 objecten (10m3)',
+                  'Vergelijkbaar met vol busje (PostNL formaat)',
+                  'Tot en met 9e etage',
+                  'Inclusief operator',
+                ]"
+                icon="material-symbols:clock-loader-10"
+              />
+              <PriceBlock
+                :price="185"
+                title="2 uur service"
+                :possibilities="[
+                  '± 20 tot 24 objecten (20m3)',
+                  'Vergelijkbaar met grotere bakwagen',
+                  'Tot en met 9e etage',
+                  'Inclusief operator',
+                ]"
+                icon="material-symbols:clock-loader-40"
+              />
+              <PriceBlock
+                :price="269"
+                title="3 - 4 uur service"
+                :possibilities="[
+                  'Noodzakelijk bij +24 objecten (25m3)',
+                  'Noodzakelijk als je op 2 locaties de verhuislift inzet',
+                  'Tot en met 9e etage',
+                  'Inclusief operator',
+                ]"
+                icon="material-symbols:clock-loader-90"
+              />
             </div>
           </div>
-          <div class="relative rounded-xl border bg-slate-100 p-10 shadow-md">
-            <h3 class="flex items-center gap-1 text-xl font-bold">
-              <Icon name="material-symbols:clock-loader-10" size="20" />
-              <span>1 uur service</span>
-            </h3>
-            <span class="">Inclusief operator</span>
-            <div class="my-10 flex items-center gap-4 font-extrabold">
-              <span class="text-4xl text-slate-600">€</span>
-              <span class="text-7xl">110</span>
-            </div>
-            <button
-              class="bg-primary mb-6 w-full rounded-xl p-3 text-xl font-bold text-white shadow-md"
-            >
-              Huur de service
-            </button>
-            <div class="">
-              <h4 class="mb-2 font-bold">Mogelijkheden:</h4>
-              <ul class="ml-5 list-disc space-y-2">
-                <li>3 objecten / 30 minuten</li>
-                <li>Tot en met 9e etage</li>
-                <li>Inclusief operator</li>
-              </ul>
-            </div>
-          </div>
-          <div class="relative rounded-xl border bg-slate-100 p-10 shadow-md">
-            <h3 class="flex items-center gap-1 text-xl font-bold">
-              <Icon name="material-symbols:clock-loader-40" size="20" />
-              <span>2 uur service</span>
-            </h3>
-            <span class="">Inclusief operator</span>
-            <div class="my-10 flex items-center gap-4 font-extrabold">
-              <span class="text-4xl text-slate-600">€</span>
-              <span class="text-7xl">179</span>
-            </div>
-            <button
-              class="bg-primary mb-6 w-full rounded-xl p-3 text-xl font-bold text-white shadow-md"
-            >
-              Huur de service
-            </button>
-            <div class="">
-              <h4 class="mb-2 font-bold">Mogelijkheden:</h4>
-              <ul class="ml-5 list-disc space-y-2">
-                <li>3 objecten / 30 minuten</li>
-                <li>Tot en met 9e etage</li>
-                <li>Inclusief operator</li>
-              </ul>
-            </div>
-          </div>
-          <div class="relative rounded-xl border bg-slate-100 p-10 shadow-md">
-            <h3 class="flex items-center gap-1 text-xl font-bold">
-              <Icon name="material-symbols:clock-loader-90" size="20" />
-              <span>3 - 4 uur service</span>
-            </h3>
-            <span class="">Inclusief operator</span>
-            <div class="my-10 flex items-center gap-4 font-extrabold">
-              <span class="text-4xl text-slate-600">€</span>
-              <span class="text-7xl">265</span>
-            </div>
-            <button
-              class="bg-primary mb-6 w-full rounded-xl p-3 text-xl font-bold text-white shadow-md"
-            >
-              Huur de service
-            </button>
-            <div class="">
-              <h4 class="mb-2 font-bold">Mogelijkheden:</h4>
-              <ul class="ml-5 list-disc space-y-2">
-                <li>3 objecten / 30 minuten</li>
-                <li>Tot en met 9e etage</li>
-                <li>Inclusief operator</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="mt-24 grid grid-cols-4 gap-10" v-else>
-          <div
-            class="to-primary relative rounded-xl border bg-gradient-to-b from-sky-300 p-10 shadow-md"
-          >
-            <span
-              class="absolute top-4 right-4 rounded-full bg-sky-50 px-4 py-2 text-xs font-bold text-sky-800 shadow-md"
-            >
-              Meest gekozen
-            </span>
-            <h3 class="flex items-center gap-1 text-xl font-bold text-white">
-              <Icon name="mingcute:stopwatch-line" size="20" />
-              <span>Snel service</span>
-            </h3>
-            <span class="text-white">Inclusief operator</span>
-            <div
-              class="my-10 flex items-center gap-4 font-extrabold text-white"
-            >
-              <span class="text-4xl text-sky-100">€</span>
-              <span class="text-7xl">105</span>
-            </div>
-            <button
-              class="mb-6 w-full rounded-xl bg-sky-800 p-3 text-xl font-bold text-slate-100 shadow-md"
-            >
-              Huur de service
-            </button>
-            <div class="text-white">
-              <h4 class="mb-2 font-bold">Mogelijkheden:</h4>
-              <ul class="ml-5 list-disc space-y-2">
-                <li>3 objecten / 30 minuten</li>
-                <li>Tot en met 9e etage</li>
-                <li>Inclusief operator</li>
-              </ul>
-            </div>
-          </div>
-          <div class="relative rounded-xl border bg-slate-100 p-10 shadow-md">
-            <h3 class="flex items-center gap-1 text-xl font-bold">
-              <Icon name="material-symbols:clock-loader-10" size="20" />
-              <span>1 uur service</span>
-            </h3>
-            <span class="">Inclusief operator</span>
-            <div class="my-10 flex items-center gap-4 font-extrabold">
-              <span class="text-4xl text-slate-600">€</span>
-              <span class="text-7xl">125</span>
-            </div>
-            <button
-              class="bg-primary mb-6 w-full rounded-xl p-3 text-xl font-bold text-white shadow-md"
-            >
-              Huur de service
-            </button>
-            <div class="">
-              <h4 class="mb-2 font-bold">Mogelijkheden:</h4>
-              <ul class="ml-5 list-disc space-y-2">
-                <li>3 objecten / 30 minuten</li>
-                <li>Tot en met 9e etage</li>
-                <li>Inclusief operator</li>
-              </ul>
-            </div>
-          </div>
-          <div class="relative rounded-xl border bg-slate-100 p-10 shadow-md">
-            <h3 class="flex items-center gap-1 text-xl font-bold">
-              <Icon name="material-symbols:clock-loader-40" size="20" />
-              <span>2 uur service</span>
-            </h3>
-            <span class="">Inclusief operator</span>
-            <div class="my-10 flex items-center gap-4 font-extrabold">
-              <span class="text-4xl text-slate-600">€</span>
-              <span class="text-7xl">185</span>
-            </div>
-            <button
-              class="bg-primary mb-6 w-full rounded-xl p-3 text-xl font-bold text-white shadow-md"
-            >
-              Huur de service
-            </button>
-            <div class="">
-              <h4 class="mb-2 font-bold">Mogelijkheden:</h4>
-              <ul class="ml-5 list-disc space-y-2">
-                <li>3 objecten / 30 minuten</li>
-                <li>Tot en met 9e etage</li>
-                <li>Inclusief operator</li>
-              </ul>
-            </div>
-          </div>
-          <div class="relative rounded-xl border bg-slate-100 p-10 shadow-md">
-            <h3 class="flex items-center gap-1 text-xl font-bold">
-              <Icon name="material-symbols:clock-loader-90" size="20" />
-              <span>3 - 4 uur service</span>
-            </h3>
-            <span class="">Inclusief operator</span>
-            <div class="my-10 flex items-center gap-4 font-extrabold">
-              <span class="text-4xl text-slate-600">€</span>
-              <span class="text-7xl">269</span>
-            </div>
-            <button
-              class="bg-primary mb-6 w-full rounded-xl p-3 text-xl font-bold text-white shadow-md"
-            >
-              Huur de service
-            </button>
-            <div class="">
-              <h4 class="mb-2 font-bold">Mogelijkheden:</h4>
-              <ul class="ml-5 list-disc space-y-2">
-                <li>3 objecten / 30 minuten</li>
-                <li>Tot en met 9e etage</li>
-                <li>Inclusief operator</li>
-              </ul>
-            </div>
-          </div>
+          <div></div>
         </div>
       </div>
     </div>
