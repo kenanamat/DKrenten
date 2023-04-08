@@ -4,7 +4,7 @@ withDefaults(
     highlight?: boolean
     price: number
     possibilities: string[]
-    icon: string
+    icon?: string
     title: string
   }>(),
   {
