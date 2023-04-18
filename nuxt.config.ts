@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/devtools",
     "nuxt-icon",
-    "nuxt-vuefire"
+    "nuxt-vuefire",
+    'nuxt-headlessui'
   ],
   tailwindcss: {
     config: {
