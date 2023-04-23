@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     "@nuxt/devtools",
     "nuxt-icon",
     "nuxt-vuefire",
-    "@nuxtjs/supabase"
+    "@nuxtjs/supabase",
+    'nuxt-headlessui'
   ],
   tailwindcss: {
     config: {

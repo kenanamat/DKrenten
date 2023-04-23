@@ -130,8 +130,8 @@ const { data: david } = await useAsyncData("user", () => $fetch("/api/user"))
   ></div>
   <div class="flex justify-center bg-sky-100">
     <div class="m-10 w-full max-w-[1440px]">
-      <div class="grid items-center justify-between gap-20 lg:grid-cols-12">
-        <div class="col-span-8">
+      <div class="grid items-center justify-between lg:grid-cols-12 lg:gap-20">
+        <div class="md:col-span-8">
           <h2 class="text-primary mb-4 text-4xl font-bold">
             Huur een verhuislift!
           </h2>
@@ -183,52 +183,6 @@ const { data: david } = await useAsyncData("user", () => $fetch("/api/user"))
           />
         </div>
       </div>
-      <!-- <div>
-        <div class="mt-12 mb-3 flex items-center gap-2">
-          <Icon
-            name="material-symbols:nest-clock-farsight-analog-outline-rounded"
-            size="32"
-            class="[&>*]:fill-primary"
-          />
-          <h3 class="text-primary text-2xl font-bold">
-            Hoelang heb ik een verhuislift nodig?
-          </h3>
-        </div>
-        <p class="w-5/6">
-          Bij DKrenten transport huur je gemakkelijk een verhuislift voor alleen
-          hetgeen dat jij nodig hebt. Bij ons hoef je niet onnodig de hele dag
-          de lift te huren, jij bepaald!
-        </p>
-        <ul class="mt-10 space-y-6">
-          <li
-            class="flex items-center gap-6 rounded-full bg-sky-50 px-6 py-3 shadow-md"
-          >
-            <h4 class="min-w-max text-lg font-bold">1 uur service:</h4>
-            <p class="">
-              Meer dan genoeg tijd om +- 10 tot 12 objecten (10m3) naar boven te
-              verhuizen. Dit is vergelijkbaar met een vol busje (PostNL formaat)
-            </p>
-          </li>
-          <li
-            class="flex items-center gap-6 rounded-full bg-sky-50 px-6 py-3 shadow-md"
-          >
-            <h4 class="min-w-max text-lg font-bold">2 uur service:</h4>
-            <p class="">
-              Ideaal als je +- 20 m3 wilt liften. Dit is vergelijkbaar met een
-              grotere bakwagen.
-            </p>
-          </li>
-          <li
-            class="flex items-center gap-6 rounded-full bg-sky-50 px-6 py-3 shadow-md"
-          >
-            <h4 class="min-w-max text-lg font-bold">3-4 uur service:</h4>
-            <p class="">
-              Noodzakelijk als je meer dan 25m3 naar boven moet verhuizen en/of
-              op 2 locaties de verhuislift wilt inzetten.
-            </p>
-          </li>
-        </ul>
-      </div> -->
     </div>
   </div>
   <!-- <div
@@ -244,36 +198,42 @@ const { data: david } = await useAsyncData("user", () => $fetch("/api/user"))
       <div class="mb-24">
         <div class="flex flex-wrap justify-between gap-32">
           <div
-            class="mx-auto flex h-36 flex-grow justify-between border-2 bg-slate-50"
+            class="order-2 mx-auto flex flex-grow justify-between rounded-full from-sky-200 via-sky-50 transition-all duration-300 xl:order-1"
+            :class="{
+              'bg-gradient-to-r': selectedRent === 'lift',
+              'bg-gradient-to-l': selectedRent === 'aanhang',
+            }"
           >
             <button
-              class="flex w-44 flex-col items-center justify-center border-2 bg-white transition-all"
+              class="flex h-40 w-40 flex-col items-center justify-center rounded-full border-2 bg-white transition-all"
               @click="selectedRent = 'lift'"
               :class="{ 'border-primary !border-4': selectedRent === 'lift' }"
             >
               <img
-                class="max-h-32 w-full"
+                class="max-h-20 w-auto"
                 src="/verhuislift.png"
                 alt="Verhuislift"
               />
               <span class="mt-2 font-bold">Meubel lift</span>
             </button>
             <button
-              class="flex w-44 flex-col items-center justify-center border-2 bg-white transition-all"
+              class="flex h-40 w-40 flex-col items-center justify-center rounded-full border-2 bg-white transition-all"
               @click="selectedRent = 'aanhang'"
               :class="{
                 'border-primary !border-4': selectedRent === 'aanhang',
               }"
             >
               <img
-                class="max-h-24"
+                class="max-h-20"
                 src="/verhuisliftaanhang.jpg"
                 alt="Aanhangwagen"
               />
               <span class="font-bold">Aanhanger lift</span>
             </button>
           </div>
-          <ul class="flex justify-center gap-8">
+          <ul
+            class="order-1 flex flex-grow xl:flex-grow-0 flex-wrap justify-center gap-8 xl:order-2 xl:justify-end"
+          >
             <li
               class="grid w-32 grid-rows-2 items-center justify-center rounded-xl bg-slate-200 p-4 shadow-md"
             >
@@ -307,7 +267,7 @@ const { data: david } = await useAsyncData("user", () => $fetch("/api/user"))
         <div>
           <div>
             <div
-              class="mt-24 grid grid-cols-4 gap-10"
+              class="mt-24 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
               v-if="selectedRent === 'lift'"
             >
               <PriceBlock
@@ -354,7 +314,10 @@ const { data: david } = await useAsyncData("user", () => $fetch("/api/user"))
                 icon="material-symbols:clock-loader-90"
               />
             </div>
-            <div class="mt-24 grid grid-cols-4 gap-10" v-else>
+            <div
+              class="mt-24 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
+              v-else
+            >
               <PriceBlock
                 highlight
                 title="Snel service"
