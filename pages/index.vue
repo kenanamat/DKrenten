@@ -5,7 +5,7 @@ import BenefitBlocks from "~~/components/BenefitBlocks.vue"
 import PriceBlock from "~~/components/PriceBlock.vue"
 
 const selectedRent = ref("lift")
-
+const nnothing = ''
 const { data } = await useAsyncData("user", () => $fetch("/api/user", {
   method: 'post',
   body: {
