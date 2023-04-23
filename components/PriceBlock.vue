@@ -54,8 +54,8 @@ withDefaults(
     </button>
     <div :class="{ 'text-white': highlight }" class="">
       <h4 class="mb-2 font-bold">Mogelijkheden met service:</h4>
-      <ul class="ml-5 list-disc space-y-2">
-        <li v-for="(item, index) in possibilities" :key="index">{{ item }}</li>
+      <ul class="ml-5 space-y-2 list-disc">
+        <li v-for="(item, index) in possibilities" :key="index" class="">{{ item }}</li>
       </ul>
     </div>
   </div>

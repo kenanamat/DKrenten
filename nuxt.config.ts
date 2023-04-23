@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     "@nuxtjs/supabase",
     'nuxt-headlessui'
   ],
+  app: {
+    pageTransition: {name: 'page', mode: 'out-in'}
+  },
   tailwindcss: {
     config: {
       content: [],
