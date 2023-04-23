@@ -5,9 +5,19 @@ import BenefitBlocks from "~~/components/BenefitBlocks.vue"
 import PriceBlock from "~~/components/PriceBlock.vue"
 
 const selectedRent = ref("lift")
+
+const { data } = await useAsyncData("user", () => $fetch("/api/user", {
+  method: 'post',
+  body: {
+    id: 4,
+    name: 'test2'
+  }
+}))
+const { data: david } = await useAsyncData("user", () => $fetch("/api/user"))
 </script>
 
 <template>
+  <div v-for="(item, index) in david" :key="index">NAME: {{ item.name }}</div>
   <div class="relative flex justify-center bg-slate-200 shadow-xl">
     <div class="z-10 m-10 max-w-[1440px]">
       <div class="relative mt-16 grid gap-16 lg:grid-cols-5 xl:grid-cols-12">

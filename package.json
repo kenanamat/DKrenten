@@ -11,19 +11,21 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.2.5",
+    "@nuxtjs/supabase": "^0.3.5",
     "@nuxtjs/tailwindcss": "^6.6.0",
     "nuxt": "^3.3.1",
     "nuxt-headlessui": "^1.1.1",
     "nuxt-icon": "^0.3.3",
     "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.5"
+    "prettier-plugin-tailwindcss": "^0.2.5",
+    "prisma": "^4.12.0"
   },
   "dependencies": {
     "@firebase/app-types": "^0.9.0",
     "@heroicons/vue": "^2.0.16",
     "@pinia/nuxt": "^0.4.7",
+    "@prisma/client": "^4.12.0",
     "@tailwindcss/forms": "^0.5.3",
-    "firebase": "^9.18.0",
     "firebase-admin": "^11.5.0",
     "nuxt-vuefire": "^0.1.6",
     "pinia": "^2.0.33",
