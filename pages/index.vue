@@ -418,7 +418,7 @@ const selectedRent = ref("lift")
                     class="flex gap-8 rounded-xl bg-sky-100 p-10 text-sky-800 shadow-md max-sm:flex-wrap"
                   >
                     <img
-                      src="verhuisbus.jpeg"
+                      src="/verhuisbus.jpeg"
                       alt="Verhuisbus"
                       class="h-40 w-40 overflow-clip rounded-xl shadow-md"
                     />
@@ -435,7 +435,7 @@ const selectedRent = ref("lift")
                     class="flex gap-8 rounded-xl bg-sky-100 p-10 text-sky-800 shadow-md max-sm:flex-wrap"
                   >
                     <img
-                      src="verhuizer2.jpeg"
+                      src="/verhuizer2.jpeg"
                       alt="Verhuizer"
                       class="h-40 w-40 overflow-clip rounded-xl shadow-md"
                     />
