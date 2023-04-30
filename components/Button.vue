@@ -1,5 +1,5 @@
 <template>
-  <router-link v-if="to" :to="to">
+  <router-link v-if="to" :to="to" class="inline-block">
     <button
       :type="type"
       class="group flex cursor-pointer items-center gap-4 p-4 font-bold transition-all hover:bg-primary hover:text-white"
@@ -12,7 +12,7 @@
       />
     </button>
   </router-link>
-  <a v-else :href="href">
+  <a v-else :href="href" class="inline-block">
     <button
       :type="type"
       class="group flex cursor-pointer items-center gap-4 p-4 font-bold transition-all hover:bg-primary hover:text-white"
