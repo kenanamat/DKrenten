@@ -19,15 +19,14 @@ const selectedRent = ref("lift")
           <div class="lg:col-span-3 xl:col-span-6">
             <div class="mb-12">
               <h1 class="mb-6">
-                <span class="text-2xl font-bold">
+                <span class="block text-2xl font-bold">
                   Zware of te grote spullen omhoog?
                 </span>
-                <br />
                 <span class="text-5xl font-bold">
                   Goedkoop met een verhuislift!
                 </span>
               </h1>
-              <p class="">
+              <p class="mb-8 mt-6">
                 Bent u op zoek naar een betrouwbare en professionele
                 verhuisservice? Zoek niet verder! DKrenten is er om u te helpen.
                 Onze vriendelijke en behulpzame medewerkers staan klaar om uw
@@ -154,13 +153,13 @@ const selectedRent = ref("lift")
                 <div
                   class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
                 >
-                  <img class="" src="/truck.png" alt="Verhuizen" />
+                  <img class="max-h-36" src="/truck.png" alt="Verhuizen" />
                   <span class="text-center text-xl font-bold">Verhuizen</span>
                 </div>
                 <div
                   class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
                 >
-                  <img class="" src="/solar.png" alt="Zonnepanelen" />
+                  <img class="max-h-36" src="/solar.png" alt="Zonnepanelen" />
                   <span class="text-center text-xl font-bold"
                     >Zonnepanelen</span
                   >
@@ -168,13 +167,13 @@ const selectedRent = ref("lift")
                 <div
                   class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
                 >
-                  <img class="" src="/washing-machine.png" alt="Witgoed" />
+                  <img class="max-h-36" src="/washing-machine.png" alt="Witgoed" />
                   <span class="text-center text-xl font-bold">Witgoed</span>
                 </div>
                 <div
-                  class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
+                  class="max-w-36 flex flex-col items-center justify-between gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
                 >
-                  <img class="" src="/wardrobe.png" alt="Meubels" />
+                  <img class="max-h-36" src="/wardrobe.png" alt="Meubels" />
                   <span class="text-center text-xl font-bold">Meubels</span>
                 </div>
               </div>
@@ -374,7 +373,7 @@ const selectedRent = ref("lift")
             </div>
             <!-- EXTRA INFORMATION -->
             <div
-              class="bg-primary to-primary my-10 mx-auto flex items-center justify-center bg-gradient-to-b from-sky-300 bg-clip-text p-0 text-[100px] font-extrabold leading-[60px] text-transparent"
+              class="bg-primary from-primary my-10 mx-auto flex items-center justify-center bg-gradient-to-b to-sky-300 bg-clip-text p-0 text-[100px] font-extrabold leading-[60px] text-transparent"
             >
               +
             </div>
@@ -415,38 +414,44 @@ const selectedRent = ref("lift")
                 <h3 class="mb-6 text-2xl font-bold">Extra service</h3>
                 <ul class="flex flex-wrap gap-8">
                   <li
-                    class="flex gap-8 rounded-xl bg-sky-100 p-10 text-sky-800 shadow-md max-sm:flex-wrap"
+                    class="flex flex-col gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md md:flex-row"
                   >
-                    <img
-                      src="/verhuisbus.jpeg"
-                      alt="Verhuisbus"
-                      class="h-40 w-40 overflow-clip rounded-xl shadow-md"
-                    />
-                    <div>
-                      <h4 class="mb-2 text-2xl font-extrabold">Verhuisbus</h4>
-                      <p class="max-w-xs">
+                    <div
+                      class="h-52 w-full bg-[url('/verhuisbus.jpeg')] bg-cover max-md:rounded-t-xl md:h-auto md:w-40 md:rounded-l-xl"
+                    ></div>
+                    <div class="max-w-[260px] max-md:px-8 md:py-8">
+                      <h4 class="mb-2 text-lg font-extrabold">Verhuisbus</h4>
+                      <p class="text-sm">
                         U kunt een verhuisbus (inhoud 21m3) huren inclusief
                         verhuizer vanaf €70 per uur. Standaard inbegrepen zijn
                         verhuisdekens, spanbanden & 2 hondjes
                       </p>
                     </div>
+                    <div
+                      class="m-4 mt-auto h-fit rounded-xl bg-sky-50 p-4 text-lg font-bold shadow-md md:my-auto"
+                    >
+                      € 70,- p/uur
+                    </div>
                   </li>
                   <li
-                    class="flex gap-8 rounded-xl bg-sky-100 p-10 text-sky-800 shadow-md max-sm:flex-wrap"
+                    class="flex flex-col gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md md:flex-row"
                   >
-                    <img
-                      src="/verhuizer2.jpeg"
-                      alt="Verhuizer"
-                      class="h-40 w-40 overflow-clip rounded-xl shadow-md"
-                    />
-                    <div>
-                      <h4 class="mb-2 text-2xl font-extrabold">
+                    <div
+                      class="h-52 w-full bg-[url('/verhuizer2.jpeg')] bg-cover max-md:rounded-t-xl md:h-auto md:w-40 md:rounded-l-xl"
+                    ></div>
+                    <div class="max-w-[260px] max-md:px-8 md:py-8">
+                      <h4 class="mb-2 text-lg font-extrabold">
                         Extra verhuizer
                       </h4>
-                      <p class="max-w-xs">
+                      <p class="text-sm">
                         Heeft u geen hulp of kunt u niet zelf tillen ? Huur dan
                         een extra verhuizer in vanaf €45 per uur inclusief btw.
                       </p>
+                    </div>
+                    <div
+                      class="m-4 mt-auto h-fit rounded-xl bg-sky-50 p-4 text-lg font-bold shadow-md md:my-auto"
+                    >
+                      € 45,- p/uur
                     </div>
                   </li>
                 </ul>
