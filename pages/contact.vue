@@ -120,7 +120,7 @@ const getCityArr = (province: keyof typeof provinces.value) => {
         </div>
       </div>
     </div> -->
-    <div class="relative isolate bg-slate-200">
+    <div class="relative isolate min-h-screen bg-slate-200 pt-36">
       <div
         class="mx-auto grid max-w-[1440px] grid-cols-1 justify-between lg:grid-cols-2"
       >
@@ -192,10 +192,7 @@ const getCityArr = (province: keyof typeof provinces.value) => {
               <div class="flex gap-x-4">
                 <dt class="flex-none">
                   <span class="sr-only">Email</span>
-                  <EnvelopeIcon
-                    class="h-7 w-6"
-                    aria-hidden="true"
-                  />
+                  <EnvelopeIcon class="h-7 w-6" aria-hidden="true" />
                 </dt>
                 <dd>
                   <a
@@ -227,7 +224,7 @@ const getCityArr = (province: keyof typeof provinces.value) => {
                       @click="cities.opened = true"
                     >
                       <Button
-                        class="hover:!text-primary [&>svg]:hover:fill-primary mt-2 inline-block cursor-pointer rounded-md border-t border-slate-400 bg-transparent !p-1 text-sm hover:bg-transparent [&>svg]:rotate-90 [&>svg]:scale-75"
+                        class="hover:!text-primary [&>svg]:hover:fill-primary mt-2 inline-block cursor-pointer rounded-none border-t border-slate-300 bg-transparent !p-1 text-sm hover:bg-transparent [&>svg]:rotate-90 [&>svg]:scale-50"
                       >
                         Toon meer..
                       </Button>

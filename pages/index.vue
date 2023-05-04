@@ -13,7 +13,9 @@ const selectedRent = ref("lift")
 
 <template>
   <main>
-    <div class="relative flex justify-center bg-slate-200 shadow-xl">
+    <div
+      class="relative flex min-h-screen justify-center bg-slate-200 pt-36 shadow-xl"
+    >
       <div class="z-10 m-10 max-w-[1440px] xl:-mb-6">
         <div class="relative mt-16 grid gap-16 lg:grid-cols-5 xl:grid-cols-12">
           <div class="lg:col-span-3 xl:col-span-6">
@@ -93,7 +95,7 @@ const selectedRent = ref("lift")
               id="rating"
               frameborder="1"
               allowtransparency="true"
-              src="https://www.klantenvertellen.nl/retrieve-widget.html?color=white&allowTransparency=false&button=true&lang=nl&tenantId=99&locationId=1068031"
+              src="https://www.klantenvertellen.nl/retrieve-widget.html?color=white&allowTransparency=true&button=true&lang=nl&tenantId=99&locationId=1068031"
               width="400"
               height="222"
               class="mt-10 w-full"
@@ -167,7 +169,11 @@ const selectedRent = ref("lift")
                 <div
                   class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
                 >
-                  <img class="max-h-36" src="/washing-machine.png" alt="Witgoed" />
+                  <img
+                    class="max-h-36"
+                    src="/washing-machine.png"
+                    alt="Witgoed"
+                  />
                   <span class="text-center text-xl font-bold">Witgoed</span>
                 </div>
                 <div

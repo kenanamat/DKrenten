@@ -5,7 +5,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline"
 const navigation = [
   { name: "Verhuislift", to: "/" },
   { name: "Verhuizen", to: "/verhuislift" },
-  { name: "Transport", to: "/transport" },
   { name: "Contact", to: "/contact" },
 ]
 
@@ -20,7 +19,7 @@ onMounted(() => {
 
 <template>
   <header
-    class="sticky top-0 z-50 bg-slate-200 px-8 transition-all duration-300 lg:px-0"
+    class="fixed w-full top-0 z-50 bg-slate-200 px-8 transition-all duration-300 lg:px-0"
     :class="{ ' bg-white shadow-md': scroll > 0 }"
   >
     <nav
