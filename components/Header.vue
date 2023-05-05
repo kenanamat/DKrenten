@@ -59,23 +59,8 @@ onMounted(() => {
         </NuxtLink>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <!-- <Button
-          class="bg-primary rounded-md py-6 px-8 font-bold text-white shadow [&>svg]:ring-white [&>svg]:ring-opacity-20"
-        >
+        <Button class="bg-primary py-6 gap-6 font-bold [&>svg]:ring-white [&>svg]:ring-opacity-20 rounded-md text-white shadow">
           Verhuislift huren!
-        </Button> -->
-        <Button
-          :arrow="false"
-          class="relative h-full !p-0 font-bold text-white shadow-md hover:bg-transparent"
-        >
-          <div
-            class="from-primary group relative flex h-full items-center rounded bg-gradient-to-r to-sky-300 py-6 px-8"
-          >
-            <div class="z-10 flex items-center">Verhuislift huren!</div>
-          </div>
-          <div
-            class="to-primary absolute left-0 top-0 h-full w-full rounded bg-gradient-to-r from-sky-300 opacity-0 transition-all duration-500 group-hover:opacity-100"
-          ></div>
         </Button>
       </div>
     </nav>
@@ -115,18 +100,8 @@ onMounted(() => {
               >
             </div>
             <div class="py-6">
-              <Button
-                :arrow="false"
-                class="relative h-full !p-0 font-bold text-white shadow-md hover:bg-transparent"
-              >
-                <div
-                  class="from-primary group relative flex h-full items-center rounded bg-gradient-to-r to-sky-300 py-6 px-8"
-                >
-                  <div class="z-10 flex items-center">Verhuislift huren!</div>
-                </div>
-                <div
-                  class="to-primary absolute left-0 top-0 h-full w-full rounded bg-gradient-to-r from-sky-300 opacity-0 transition-all duration-500 group-hover:opacity-100"
-                ></div>
+              <Button class="bg-primary py-6 font-bold [&>svg]:ring-white [&>svg]:ring-opacity-20 rounded-md text-white shadow">
+                Verhuislift huren!
               </Button>
             </div>
           </div>
