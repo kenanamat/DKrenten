@@ -29,7 +29,7 @@ import { Icon } from "#components"
                 name="street-address"
                 id="street-address"
                 autocomplete="street-address"
-                class="block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+                class="focus:ring-primary block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -48,7 +48,7 @@ import { Icon } from "#components"
                 name="city"
                 id="city"
                 autocomplete="address-level2"
-                class="block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:max-w-xs sm:text-sm sm:leading-6"
+                class="focus:ring-primary block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:max-w-xs sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -67,7 +67,7 @@ import { Icon } from "#components"
                 name="postal-code"
                 id="postal-code"
                 autocomplete="postal-code"
-                class="block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:max-w-xs sm:text-sm sm:leading-6"
+                class="focus:ring-primary block w-full max-w-lg rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:max-w-xs sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -77,13 +77,28 @@ import { Icon } from "#components"
 
     <div class="pt-5">
       <div class="flex justify-end gap-x-3">
-        <button
+        <!-- <Button
           type="submit"
-          class="bg-primary hover:bg-accent text-md inline-flex items-center justify-center gap-2 rounded-md py-2 px-3 font-semibold text-white shadow-sm transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          class="bg-primary text-white [&>svg]:ring-white [&>svg]:ring-opacity-20 [&>svg]:scale-75 rounded py-2"
         >
           Bekijk je opties!
-          <Icon name="material-symbols:arrow-right-alt-rounded" size="26" />
-        </button>
+        </Button> -->
+        <Button
+        type="submit"
+        :arrow="false"
+        class="!p-0 relative font-bold text-white shadow-md hover:bg-transparent"
+        >
+          <div
+            class="from-primary group relative flex rounded bg-gradient-to-r to-sky-300 px-6 py-4"
+          >
+            <div class="z-10 flex items-center">
+              Bekijk de mogelijkheden!
+            </div>
+          </div>
+          <div
+            class="to-primary absolute left-0 top-0 h-full w-full rounded bg-gradient-to-r from-sky-300 opacity-0 transition-all duration-500 group-hover:opacity-100"
+          ></div>
+        </Button>
       </div>
     </div>
   </form>

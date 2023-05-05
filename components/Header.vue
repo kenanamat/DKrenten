@@ -19,7 +19,7 @@ onMounted(() => {
 
 <template>
   <header
-    class="fixed w-full top-0 z-50 bg-slate-200 px-8 transition-all duration-300 lg:px-0"
+    class="fixed top-0 z-50 w-full bg-slate-200 px-8 transition-all duration-300 lg:px-0"
     :class="{ ' bg-white shadow-md': scroll > 0 }"
   >
     <nav
@@ -59,12 +59,24 @@ onMounted(() => {
         </NuxtLink>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <button
-          class="bg-primary flex items-center gap-4 rounded px-8 py-6 text-lg font-bold text-white shadow"
+        <!-- <Button
+          class="bg-primary rounded-md py-6 px-8 font-bold text-white shadow [&>svg]:ring-white [&>svg]:ring-opacity-20"
         >
-          <span>Verhuislift huren!</span>
-          <Icon name="material-symbols:arrow-right-alt-rounded" size="26" />
-        </button>
+          Verhuislift huren!
+        </Button> -->
+        <Button
+          :arrow="false"
+          class="relative h-full !p-0 font-bold text-white shadow-md hover:bg-transparent"
+        >
+          <div
+            class="from-primary group relative flex h-full items-center rounded bg-gradient-to-r to-sky-300 py-6 px-8"
+          >
+            <div class="z-10 flex items-center">Verhuislift huren!</div>
+          </div>
+          <div
+            class="to-primary absolute left-0 top-0 h-full w-full rounded bg-gradient-to-r from-sky-300 opacity-0 transition-all duration-500 group-hover:opacity-100"
+          ></div>
+        </Button>
       </div>
     </nav>
     <Dialog
@@ -103,15 +115,19 @@ onMounted(() => {
               >
             </div>
             <div class="py-6">
-              <button
-                class="bg-primary flex items-center gap-4 rounded px-8 py-6 text-lg font-bold text-white shadow"
+              <Button
+                :arrow="false"
+                class="relative h-full !p-0 font-bold text-white shadow-md hover:bg-transparent"
               >
-                <span>Verhuislift huren!</span>
-                <Icon
-                  name="material-symbols:arrow-right-alt-rounded"
-                  size="26"
-                />
-              </button>
+                <div
+                  class="from-primary group relative flex h-full items-center rounded bg-gradient-to-r to-sky-300 py-6 px-8"
+                >
+                  <div class="z-10 flex items-center">Verhuislift huren!</div>
+                </div>
+                <div
+                  class="to-primary absolute left-0 top-0 h-full w-full rounded bg-gradient-to-r from-sky-300 opacity-0 transition-all duration-500 group-hover:opacity-100"
+                ></div>
+              </Button>
             </div>
           </div>
         </div>

@@ -43,18 +43,29 @@ const selectedRent = ref("lift")
                 Algehele verhuisservice
               </button>
               <div class="relative flex">
-                <button
-                  class="bg-primary flex items-center rounded px-6 py-4 text-lg font-bold text-white shadow-md"
+                <Button
+                  :arrow="false"
+                  class="!p-0 text-lg font-bold text-white shadow-md hover:bg-transparent"
                 >
-                  <Icon
-                    name="mdi:tow-truck"
-                    size="40"
-                    class="[&>*]:fill-white"
-                  />
-                  <span class="ml-4"
-                    >Een verhuislift huren (inc. operator)</span
+                  <div
+                    class="from-primary group relative flex rounded bg-gradient-to-r to-sky-300 px-6 py-4"
                   >
-                </button>
+                  <div class="z-10 flex items-center">
+
+                    <Icon
+                      name="mdi:tow-truck"
+                      size="40"
+                      class="[&>*]:fill-white"
+                    />
+                    <span class="ml-4">
+                      Een verhuislift huren (inc. operator)
+                    </span>
+                  </div>
+                  </div>
+                  <div
+                    class="to-primary absolute left-0 top-0 h-full w-full rounded bg-gradient-to-r from-sky-300 opacity-0 transition-all duration-500 group-hover:opacity-100"
+                  ></div>
+                </Button>
               </div>
             </div>
           </div>
@@ -388,9 +399,7 @@ const selectedRent = ref("lift")
             >
               <div>
                 <h3 class="mb-6 text-2xl font-bold">Extra toeslagen</h3>
-                <ul
-                  class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
-                >
+                <ul class="space-y-2">
                   <li
                     v-for="(item, index) in [
                       ['Na 17:00 uur eenmalig avondtoeslag', '€ 50,-'],
@@ -406,11 +415,11 @@ const selectedRent = ref("lift")
                       ['Zon- en feestdagen', '€ 50,-'],
                     ]"
                     :key="index"
-                    class="flex items-center justify-between gap-2 rounded-xl bg-sky-100 p-2 font-bold text-sky-800 shadow-md sm:p-6"
+                    class="flex items-center justify-between gap-4 rounded bg-sky-100 p-2 font-bold text-sky-800 shadow-md first-of-type:rounded-t-xl last-of-type:rounded-b-xl sm:p-4"
                   >
-                    <span class="max-w-[160px] text-sm">{{ item[0] }}</span>
+                    <span class="text-sm">{{ item[0] }}</span>
                     <span
-                      class="min-w-fit rounded-xl bg-sky-50 p-2 text-lg shadow-md"
+                      class="min-w-fit rounded-xl bg-sky-50 p-2 shadow-md"
                       >{{ item[1] }}</span
                     >
                   </li>
@@ -423,10 +432,10 @@ const selectedRent = ref("lift")
                     class="flex flex-col gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md md:flex-row"
                   >
                     <div
-                      class="h-52 w-full bg-[url('/verhuisbus.jpeg')] bg-cover max-md:rounded-t-xl md:h-auto md:w-40 md:rounded-l-xl"
+                      class="h-52 w-full bg-[url('/verhuisbus.jpeg')] bg-cover max-md:rounded-t-xl md:h-auto md:w-44 md:rounded-l-xl"
                     ></div>
                     <div class="max-w-[260px] max-md:px-8 md:py-8">
-                      <h4 class="mb-2 text-lg font-extrabold">Verhuisbus</h4>
+                      <h4 class="mb-1 text-lg font-extrabold">Verhuisbus</h4>
                       <p class="text-sm">
                         U kunt een verhuisbus (inhoud 21m3) huren inclusief
                         verhuizer vanaf €70 per uur. Standaard inbegrepen zijn
@@ -443,10 +452,10 @@ const selectedRent = ref("lift")
                     class="flex flex-col gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md md:flex-row"
                   >
                     <div
-                      class="h-52 w-full bg-[url('/verhuizer2.jpeg')] bg-cover max-md:rounded-t-xl md:h-auto md:w-40 md:rounded-l-xl"
+                      class="h-52 w-full bg-[url('/verhuizer2.jpeg')] bg-cover max-md:rounded-t-xl md:h-auto md:w-44 md:rounded-l-xl"
                     ></div>
                     <div class="max-w-[260px] max-md:px-8 md:py-8">
-                      <h4 class="mb-2 text-lg font-extrabold">
+                      <h4 class="mb-1 text-lg font-extrabold">
                         Extra verhuizer
                       </h4>
                       <p class="text-sm">
