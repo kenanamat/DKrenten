@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { PhoneIcon } from "@heroicons/vue/24/outline"
-import { useContactStore } from '../stores/contact';
+import { useContactStore } from "../stores/contact"
+import { useNotificationStore } from "../stores/notification"
 const provinces = ref({
   "Noord-Holland": {
     opened: false,
@@ -60,6 +61,33 @@ const getCityArr = (province: keyof typeof provinces.value) => {
 }
 
 const contactStore = useContactStore()
+const notification = useNotificationStore()
+
+const sendEmail = async () => {
+  try {
+    await useFetch("/api/mail", {
+      method: "post",
+      body: {
+        name: contactStore.name,
+        lastname: contactStore.lastname,
+        email: contactStore.email,
+        message: contactStore.message,
+        phone: contactStore.phone,
+      },
+    })
+    notification.showNotification({
+      title: "Email verstuurd!",
+      message: "We nemen zo snel mogelijk contact met je op!",
+    })
+  } catch {
+    notification.showNotification({
+      title: "Er ging iets mis",
+      message: "Probeer ons te bereiken via het nummer of WhatsApp!",
+      type: "alert",
+    })
+  }
+  contactStore.reset()
+}
 </script>
 
 <template>
@@ -74,6 +102,7 @@ const contactStore = useContactStore()
           <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h1 class="mb-6">
               <span class="block text-2xl font-bold">
+                <button @click="sendEmail">wat</button>
                 Onbeantwoorde vragen?
               </span>
               <span class="text-5xl font-bold"> Neem contact op! </span>
@@ -158,7 +187,7 @@ const contactStore = useContactStore()
             class="ml-auto -mb-4 max-h-52 -scale-x-100 lg:mt-32"
           />
           <form
-            @submit.prevent="contactStore.sendEmail()"
+            @submit.prevent="sendEmail"
             class="rounded-xl bg-slate-100 pt-20 pb-24 shadow-md sm:mb-32 lg:py-16 lg:px-8"
           >
             <div class="mx-auto max-w-xl px-4 lg:max-w-lg">

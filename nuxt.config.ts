@@ -8,21 +8,6 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/supabase",
     "nuxt-headlessui",
-    [
-      "nuxt-mail",
-      {
-        message: {
-          to: "kenanamat@gmail.com"
-        },
-        smtp: {
-          service: "gmail",
-          auth: {
-            user: "kenanamat@gmail.com",
-            pass: "Ik wil een aardappel12-",
-          },
-        },
-      },
-    ],
   ],
   app: {
     pageTransition: { name: "page", mode: "out-in" },

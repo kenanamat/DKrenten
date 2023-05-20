@@ -7,17 +7,12 @@ export const useContactStore = defineStore("contact", () => {
     phone = ref(""),
     message = ref("")
 
-  async function sendEmail() {
-    const mail = useMail()
-
-    mail.send({
-      from: `${name} ${lastname} | ${email}`,
-      subject: `Contact formulier | ${new Date}`,
-      text: message
-    })
-
-    console.log("Tried sending")
-    console.log(message)
+  const reset = () => {
+    name.value = ""
+    lastname.value = ""
+    email.value = ""
+    phone.value = ""
+    message.value = ""
   }
 
   return {
@@ -26,6 +21,6 @@ export const useContactStore = defineStore("contact", () => {
     email,
     phone,
     message,
-    sendEmail
+    reset
   }
 })

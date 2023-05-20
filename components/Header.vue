@@ -19,7 +19,7 @@ onMounted(() => {
 
 <template>
   <header
-    class="fixed top-0 z-50 w-full bg-slate-200 px-8 transition-all duration-300 lg:px-0"
+    class="fixed top-0 z-40 w-full bg-slate-200 px-8 transition-all duration-300 lg:px-0"
     :class="{ ' bg-white shadow-md': scroll > 0 }"
   >
     <nav
