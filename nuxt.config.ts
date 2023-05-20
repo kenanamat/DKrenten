@@ -7,10 +7,10 @@ export default defineNuxtConfig({
     "@nuxt/devtools",
     "nuxt-icon",
     "@nuxtjs/supabase",
-    'nuxt-headlessui'
+    "nuxt-headlessui",
   ],
   app: {
-    pageTransition: {name: 'page', mode: 'out-in'}
+    pageTransition: { name: "page", mode: "out-in" },
   },
   tailwindcss: {
     config: {
@@ -19,18 +19,16 @@ export default defineNuxtConfig({
         extend: {
           colors: {
             primary: "#29ABE2",
-            accent: "#E8871E"
+            accent: "#E8871E",
           },
         },
       },
-      plugins: [
-        require("@tailwindcss/forms"),
-      ]
+      plugins: [require("@tailwindcss/forms")],
     },
   },
   nitro: {
     prerender: {
-      routes: ['/']
-    }
-  }
+      routes: ["/"],
+    },
+  },
 })

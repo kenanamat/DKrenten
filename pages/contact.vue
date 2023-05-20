@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import {
-  BuildingOffice2Icon,
-  EnvelopeIcon,
-  PhoneIcon,
-} from "@heroicons/vue/24/outline"
+import { PhoneIcon } from "@heroicons/vue/24/outline"
+import { useContactStore } from "../stores/contact"
+import { useNotificationStore } from "../stores/notification"
 const provinces = ref({
   "Noord-Holland": {
     opened: false,
@@ -61,6 +59,35 @@ const getCityArr = (province: keyof typeof provinces.value) => {
   if (provinces.value[province].opened) return provinces.value[province].cities
   else return provinces.value[province].cities.slice(0, 4)
 }
+
+const contactStore = useContactStore()
+const notification = useNotificationStore()
+
+const sendEmail = async () => {
+  try {
+    await useFetch("/api/mail", {
+      method: "post",
+      body: {
+        name: contactStore.name,
+        lastname: contactStore.lastname,
+        email: contactStore.email,
+        message: contactStore.message,
+        phone: contactStore.phone,
+      },
+    })
+    notification.showNotification({
+      title: "Email verstuurd!",
+      message: "We nemen zo snel mogelijk contact met je op!",
+    })
+  } catch {
+    notification.showNotification({
+      title: "Er ging iets mis",
+      message: "Probeer ons te bereiken via het nummer of WhatsApp!",
+      type: "alert",
+    })
+  }
+  contactStore.reset()
+}
 </script>
 
 <template>
@@ -75,6 +102,7 @@ const getCityArr = (province: keyof typeof provinces.value) => {
           <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h1 class="mb-6">
               <span class="block text-2xl font-bold">
+                <button @click="sendEmail">wat</button>
                 Onbeantwoorde vragen?
               </span>
               <span class="text-5xl font-bold"> Neem contact op! </span>
@@ -86,7 +114,7 @@ const getCityArr = (province: keyof typeof provinces.value) => {
               verhuizing snel en efficiënt uit te voeren. Gebruik onze tool om
               direct inzage te krijgen over de kosten!
             </p>
-            <dl class="space-y-2 mb-20 leading-7">
+            <dl class="mb-20 space-y-2 leading-7">
               <div class="flex gap-8">
                 <Button
                   :arrow="false"
@@ -156,10 +184,10 @@ const getCityArr = (province: keyof typeof provinces.value) => {
           <img
             src="/white-truck-trans.png"
             alt=""
-            class="ml-auto max-h-52 -scale-x-100 lg:mt-32 -mb-4"
+            class="ml-auto -mb-4 max-h-52 -scale-x-100 lg:mt-32"
           />
           <form
-            @submit.prevent=""
+            @submit.prevent="sendEmail"
             class="rounded-xl bg-slate-100 pt-20 pb-24 shadow-md sm:mb-32 lg:py-16 lg:px-8"
           >
             <div class="mx-auto max-w-xl px-4 lg:max-w-lg">
@@ -171,6 +199,7 @@ const getCityArr = (province: keyof typeof provinces.value) => {
                   <div class="mt-2.5">
                     <input
                       required
+                      v-model="contactStore.name"
                       type="text"
                       name="first-name"
                       id="first-name"
@@ -186,6 +215,7 @@ const getCityArr = (province: keyof typeof provinces.value) => {
                   <div class="mt-2.5">
                     <input
                       required
+                      v-model="contactStore.lastname"
                       type="text"
                       name="last-name"
                       id="last-name"
@@ -199,6 +229,7 @@ const getCityArr = (province: keyof typeof provinces.value) => {
                   <div class="mt-2.5">
                     <input
                       required
+                      v-model="contactStore.email"
                       type="email"
                       name="email"
                       id="email"
@@ -214,6 +245,7 @@ const getCityArr = (province: keyof typeof provinces.value) => {
                   <div class="mt-2.5">
                     <input
                       required
+                      v-model="contactStore.phone"
                       type="tel"
                       name="phone-number"
                       id="phone-number"
@@ -232,6 +264,7 @@ const getCityArr = (province: keyof typeof provinces.value) => {
                   <div class="mt-2.5">
                     <textarea
                       required
+                      v-model="contactStore.message"
                       name="message"
                       id="message"
                       rows="4"
