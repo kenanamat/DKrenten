@@ -4,6 +4,6 @@ import "./assets/_styles.css"
 
 <template>
   <Notification />
-  <Header />
+  <Navigation />
   <NuxtPage />
 </template>

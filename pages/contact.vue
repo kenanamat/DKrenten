@@ -102,7 +102,6 @@ const sendEmail = async () => {
           <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h1 class="mb-6">
               <span class="block text-2xl font-bold">
-                <button @click="sendEmail">wat</button>
                 Onbeantwoorde vragen?
               </span>
               <span class="text-5xl font-bold"> Neem contact op! </span>
@@ -115,10 +114,10 @@ const sendEmail = async () => {
               direct inzage te krijgen over de kosten!
             </p>
             <dl class="mb-20 space-y-2 leading-7">
-              <div class="flex gap-8">
+              <div class="flex items-center gap-8">
                 <Button
                   :arrow="false"
-                  class="!m-0 h-full !p-0 hover:bg-transparent"
+                  class="!m-0 h-full bg-transparent !p-0 shadow-none hover:!bg-transparent"
                   href="tel:(+31) 657991999"
                 >
                   <div
@@ -137,7 +136,7 @@ const sendEmail = async () => {
                   </div>
                 </Button>
                 <dt>
-                  <span class="sr-only">Whatsapp</span>
+                  <span class="sr-only">WhatsApp</span>
                   <a
                     href="https://wa.me/+31657991999"
                     target="_blank"
@@ -152,9 +151,7 @@ const sendEmail = async () => {
               <ul class="grid gap-8 sm:grid-cols-2">
                 <li v-for="(cities, province) in provinces" :key="province">
                   <ul class="">
-                    <h3
-                      class="mb-2 w-44 rounded-xl bg-slate-100 p-4 font-bold shadow-md"
-                    >
+                    <h3 class="mb-2 w-44 rounded bg-slate-100 p-4 font-bold">
                       {{ province }}
                     </h3>
                     <li
@@ -169,7 +166,7 @@ const sendEmail = async () => {
                       @click="cities.opened = true"
                     >
                       <Button
-                        class="hover:!text-primary [&>svg]:hover:fill-primary mt-2 inline-block cursor-pointer rounded-none border-t border-slate-300 bg-transparent !p-1 text-sm hover:bg-transparent [&>svg]:rotate-90 [&>svg]:scale-50"
+                        class="hover:!text-primary [&>svg]:hover:fill-primary mt-2 inline-block cursor-pointer rounded-none border-t border-slate-300 bg-transparent !p-1 text-sm !text-black shadow-none hover:!bg-transparent [&>svg]:rotate-90 [&>svg]:scale-50"
                       >
                         Toon meer..
                       </Button>

@@ -33,34 +33,31 @@ const selectedRent = ref("lift")
                 verhuisservice? Zoek niet verder! DKrenten is er om u te helpen.
                 Onze vriendelijke en behulpzame medewerkers staan klaar om uw
                 verhuizing snel en efficiënt uit te voeren. Gebruik onze tool om
-                direct inzage te krijgen over de kosten!
+                <strong>direct inzage</strong> te krijgen over de kosten!
               </p>
             </div>
             <div class="flex flex-wrap gap-8">
-              <button
-                class="rounded bg-white px-6 py-4 text-lg font-bold shadow-md"
-              >
+              <Button :arrow="false" to="/verhuizen" class="bg-white text-lg !text-black hover:!text-white">
                 Algehele verhuisservice
-              </button>
+              </Button>
               <div class="relative flex">
                 <Button
                   :arrow="false"
-                  class="!p-0 text-lg font-bold text-white shadow-md hover:bg-transparent"
+                  class="!p-0 text-lg hover:bg-transparent"
                 >
                   <div
                     class="from-primary group relative flex rounded bg-gradient-to-r to-sky-300 px-6 py-4"
                   >
-                  <div class="z-10 flex items-center">
-
-                    <Icon
-                      name="mdi:tow-truck"
-                      size="40"
-                      class="[&>*]:fill-white"
-                    />
-                    <span class="ml-4">
-                      Een verhuislift huren (inc. operator)
-                    </span>
-                  </div>
+                    <div class="z-10 flex items-center">
+                      <Icon
+                        name="mdi:tow-truck"
+                        size="40"
+                        class="[&>*]:fill-white"
+                      />
+                      <span class="ml-4">
+                        Een verhuislift huren (inc. operator)
+                      </span>
+                    </div>
                   </div>
                   <div
                     class="to-primary absolute left-0 top-0 h-full w-full rounded bg-gradient-to-r from-sky-300 opacity-0 transition-all duration-500 group-hover:opacity-100"
@@ -114,7 +111,7 @@ const selectedRent = ref("lift")
           </div>
         </div>
         <img
-          class="my-20 md:w-[65%] lg:mb-32 lg:-mt-[29rem]"
+          class="my-20 md:w-[60%] lg:mb-32 lg:-mt-[29rem]"
           src="/white-truck-trans.png"
           alt="DKrenten truck"
         />
