@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { Icon } from "#components"
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <form class="space-y-8 divide-y divide-gray-200">
@@ -84,16 +82,14 @@ import { Icon } from "#components"
           Bekijk je opties!
         </Button> -->
         <Button
-        type="submit"
-        :arrow="false"
-        class="!p-0 relative font-bold text-white shadow-md hover:bg-transparent"
+          type="submit"
+          :arrow="false"
+          class="relative !p-0 font-bold text-white shadow-md hover:bg-transparent"
         >
           <div
             class="from-primary group relative flex rounded bg-gradient-to-r to-sky-300 px-6 py-4"
           >
-            <div class="z-10 flex items-center">
-              Bekijk de mogelijkheden!
-            </div>
+            <div class="z-10 flex items-center">Bekijk de mogelijkheden!</div>
           </div>
           <div
             class="to-primary absolute left-0 top-0 h-full w-full rounded bg-gradient-to-r from-sky-300 opacity-0 transition-all duration-500 group-hover:opacity-100"

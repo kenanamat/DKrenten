@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/supabase",
     "nuxt-headlessui",
+    "@vueuse/nuxt",
   ],
   app: {
     pageTransition: { name: "page", mode: "out-in" },
