@@ -133,7 +133,7 @@ const truckPos = computed(() => {
           </p>
         </div>
         <hr class="mx-auto mt-8 mb-14 w-80" />
-        <div class="flex flex-wrap justify-center gap-10 md:justify-between">
+        <div class="flex flex-wrap gap-12 justify-evenly">
           <div
             class="flex w-96 flex-col justify-between rounded-3xl bg-gradient-to-b from-sky-50 to-transparent p-10"
           >
