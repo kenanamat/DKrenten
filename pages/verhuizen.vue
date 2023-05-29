@@ -203,9 +203,9 @@ const truckPos = computed(() => {
         </h2>
         <ul class="relative z-10 grid gap-x-52 md:grid-cols-2">
           <li class="">
-            <sub class="text-primary font-bold text-base">Stap 1</sub>
+            <sub class="text-primary text-base font-bold">Stap 1</sub>
             <div
-              class="flex mt-2 h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
+              class="mt-2 flex h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
             >
               <h3 class="mb-2 text-2xl font-bold">Aanvraag</h3>
               <p class="text-sm">
@@ -217,23 +217,23 @@ const truckPos = computed(() => {
           <li class="mt-24 md:mt-60">
             <sub class="text-primary text-base font-bold">Stap 2</sub>
             <div
-              class="flex mt-2 h-52 flex-col text-center items-center justify-center rounded-xl bg-sky-50 p-4 shadow-xl"
+              class="mt-2 flex h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
             >
               <h3 class="text-2xl font-bold">Controleren</h3>
             </div>
           </li>
           <li class="max-md:mt-24">
-            <sub class="text-primary font-bold text-base">Stap 3</sub>
+            <sub class="text-primary text-base font-bold">Stap 3</sub>
             <div
-              class="flex mt-2 h-52 flex-col text-center items-center justify-center rounded-xl bg-sky-50 p-4 shadow-xl"
+              class="mt-2 flex h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
             >
               <h3 class="text-2xl font-bold">Akkoord</h3>
             </div>
           </li>
           <li class="mt-24 md:mt-60">
-            <sub class="text-primary font-bold text-base">Stap 4</sub>
+            <sub class="text-primary text-base font-bold">Stap 4</sub>
             <div
-              class="flex mt-2 h-52 flex-col text-center items-center justify-center rounded-xl bg-sky-50 p-4 shadow-xl"
+              class="mt-2 flex h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
             >
               <h3 class="mb-2 text-xl font-bold">Voorbereiding</h3>
               <p class="text-sm">
@@ -245,11 +245,11 @@ const truckPos = computed(() => {
             </div>
           </li>
           <li class="max-md:mt-24 max-md:mb-24">
-            <sub class="text-primary font-bold text-base">Stap 5</sub>
+            <sub class="text-primary text-base font-bold">Stap 5</sub>
             <div
-              class="flex mt-2 h-52 flex-col text-center items-center justify-center rounded-xl bg-sky-50 p-4 shadow-xl"
+              class="mt-2 flex h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
             >
-              <h3 class="text-xl font-bold mb-2">Verhuisdag</h3>
+              <h3 class="mb-2 text-xl font-bold">Verhuisdag</h3>
               <p class="text-sm">
                 Wij koppelen jouw transport aan de professionele koerier op de
                 weg. Jij ontvangt een e-mail met het tijdvak van 4 uur waarin de
@@ -273,10 +273,7 @@ const truckPos = computed(() => {
         </div>
       </div>
     </div>
-    <div
-      class="-mt-1 h-20 w-full bg-sky-100"
-      style="clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%)"
-    ></div>
 
+    <FAQ />
   </main>
 </template>
