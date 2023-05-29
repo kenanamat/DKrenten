@@ -17,7 +17,7 @@ const selectedRent = ref("lift")
       class="relative flex min-h-screen justify-center bg-slate-200 pt-36 shadow-xl"
     >
       <div class="z-10 m-10 max-w-[1440px] xl:-mb-6">
-        <div class="relative mt-16 grid gap-16 lg:grid-cols-5 xl:grid-cols-12">
+        <div class="relative sm:mt-16 grid gap-16 lg:grid-cols-5 xl:grid-cols-12">
           <div class="lg:col-span-3 xl:col-span-6">
             <div class="mb-12">
               <h1 class="mb-6">
@@ -121,7 +121,7 @@ const selectedRent = ref("lift")
         />
       </div>
       <div
-        class="bg-primary absolute bottom-0 right-0 h-20 w-full"
+        class="bg-primary absolute bottom-0 right-0 h-20 w-full min-w-[1920px]"
         style="clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%)"
       ></div>
     </div>
@@ -143,7 +143,7 @@ const selectedRent = ref("lift")
       style="clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%)"
     ></div>
     <div class="flex justify-center bg-sky-100">
-      <div class="m-10 w-full max-w-[1440px]">
+      <div class="m-2 sm:m-10 w-full max-w-[1440px]">
         <div
           class="grid items-center justify-between lg:grid-cols-12 lg:gap-20"
         >
@@ -167,13 +167,13 @@ const selectedRent = ref("lift")
                 class="grid grid-cols-2 justify-between gap-10 md:grid-cols-4"
               >
                 <div
-                  class="max-md:h-3w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
+                  class="flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
                 >
                   <img class="max-h-30" src="/truck.png" alt="Verhuizen" />
                   <span class="text-center text-xl font-bold">Verhuizen</span>
                 </div>
                 <div
-                  class="max-md:h-3w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
+                  class="flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
                 >
                   <img class="max-h-30" src="/solar.png" alt="Zonnepanelen" />
                   <span class="text-center text-xl font-bold"
@@ -181,7 +181,7 @@ const selectedRent = ref("lift")
                   >
                 </div>
                 <div
-                  class="max-md:h-3w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
+                  class="flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
                 >
                   <img
                     class="max-h-30"
@@ -191,7 +191,7 @@ const selectedRent = ref("lift")
                   <span class="text-center text-xl font-bold">Witgoed</span>
                 </div>
                 <div
-                  class="max-md:h-3w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
+                  class="flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
                 >
                   <img class="max-h-30" src="/wardrobe.png" alt="Meubels" />
                   <span class="text-center text-xl font-bold">Meubels</span>
@@ -398,7 +398,7 @@ const selectedRent = ref("lift")
               +
             </div>
             <div
-              class="to-primary rounded-xl bg-gradient-to-b from-sky-300 p-10 text-white shadow-md"
+              class="to-primary rounded-xl bg-gradient-to-b from-sky-300 p-2 sm:p-10 text-white shadow-md"
             >
               <div>
                 <h3 class="mb-6 text-2xl font-bold">Extra toeslagen</h3>
@@ -432,7 +432,7 @@ const selectedRent = ref("lift")
                 <h3 class="mb-6 text-2xl font-bold">Extra service</h3>
                 <ul class="flex flex-wrap gap-8">
                   <li
-                    class="flex flex-col gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md md:flex-row"
+                    class="flex flex-col max-sm:w-full gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md md:flex-row"
                   >
                     <div
                       class="h-52 w-full bg-[url('/verhuisbus.jpeg')] bg-cover max-md:rounded-t-xl md:h-auto md:w-44 md:rounded-l-xl"
@@ -452,10 +452,10 @@ const selectedRent = ref("lift")
                     </div>
                   </li>
                   <li
-                    class="flex flex-col gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md md:flex-row"
+                    class="flex flex-col max-sm:w-full gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md md:flex-row"
                   >
                     <div
-                      class="h-52 w-full bg-[url('/verhuizer2.jpeg')] bg-cover max-md:rounded-t-xl md:h-auto md:w-44 md:rounded-l-xl"
+                      class="h-52 w-full bg-[url('/verhuizer2.jpeg')] bg-cover max-md:rounded-t-xl md:h-auto md:w-44 md:rounded-l-xl bg-center"
                     ></div>
                     <div class="max-w-[260px] max-md:px-8 md:py-8">
                       <h4 class="mb-1 text-lg font-extrabold">

@@ -23,7 +23,7 @@ const truckPos = computed(() => {
       class="relative flex min-h-screen justify-center bg-slate-200 pt-36 shadow-xl"
     >
       <div class="z-10 m-10 max-w-[1440px] xl:-mb-6">
-        <div class="relative mt-16 grid gap-16 lg:grid-cols-5 xl:grid-cols-12">
+        <div class="relative sm:mt-16 grid gap-16 lg:grid-cols-5 xl:grid-cols-12">
           <div class="lg:col-span-3 xl:col-span-6">
             <div class="mb-12">
               <h1 class="mb-6">
@@ -197,7 +197,7 @@ const truckPos = computed(() => {
       style="clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%)"
     ></div>
     <div class="flex justify-center bg-sky-100">
-      <div class="relative m-10 w-full max-w-[1440px]">
+      <div class="relative m-2 sm:m-10 w-full max-w-[1440px]">
         <h2 class="text-primary mb-8 text-center text-4xl font-bold">
           Werkwijze
         </h2>

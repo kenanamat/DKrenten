@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center bg-sky-100 py-16">
-    <div class="m-10 w-full max-w-[1440px]">
+    <div class="m-2 sm:m-10 w-full max-w-[1440px]">
       <h2 class="text-primary mb-4 text-4xl font-bold">Veelgestelde vragen</h2>
       <p class="mt-4 mb-12 text-base leading-7 text-gray-600">
         Kan je het antwoord dat je zoekt niet vinden? Neem snel
@@ -20,7 +20,7 @@
           class="rounded-xl bg-sky-50 py-8 shadow"
         >
           <DisclosureButton
-            class="flex w-full cursor-pointer pl-4 text-start !text-black"
+            class="flex w-full cursor-pointer pl-4 text-start !text-black items-center"
           >
             <span class="pr-4">{{ question.q }}</span>
             <div class="relative ml-auto mr-4 h-8 w-4 font-extrabold">
