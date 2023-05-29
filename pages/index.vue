@@ -159,35 +159,35 @@ const selectedRent = ref("lift")
               <h3 class="text-primary mt-14 mb-10 text-3xl font-bold">
                 Een verhuislift kan je gebruiken voor:
               </h3>
-              <div class="flex flex-wrap gap-10">
+              <div class="grid grid-cols-2 md:grid-cols-4 justify-between gap-10">
                 <div
-                  class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
+                  class="max-md:w-36 max-md:h-3w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
                 >
-                  <img class="max-h-36" src="/truck.png" alt="Verhuizen" />
+                  <img class="max-h-30" src="/truck.png" alt="Verhuizen" />
                   <span class="text-center text-xl font-bold">Verhuizen</span>
                 </div>
                 <div
-                  class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
+                  class="flex flex-col max-md:w-36 max-md:h-3w-36 items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
                 >
-                  <img class="max-h-36" src="/solar.png" alt="Zonnepanelen" />
+                  <img class="max-h-30" src="/solar.png" alt="Zonnepanelen" />
                   <span class="text-center text-xl font-bold"
                     >Zonnepanelen</span
                   >
                 </div>
                 <div
-                  class="max-w-36 flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
+                  class="flex flex-col max-md:w-36 max-md:h-3w-36 items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
                 >
                   <img
-                    class="max-h-36"
+                    class="max-h-30"
                     src="/washing-machine.png"
                     alt="Witgoed"
                   />
                   <span class="text-center text-xl font-bold">Witgoed</span>
                 </div>
                 <div
-                  class="max-w-36 flex flex-col items-center justify-between gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
+                  class="flex flex-col max-md:w-36 max-md:h-3w-36 items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md"
                 >
-                  <img class="max-h-36" src="/wardrobe.png" alt="Meubels" />
+                  <img class="max-h-30" src="/wardrobe.png" alt="Meubels" />
                   <span class="text-center text-xl font-bold">Meubels</span>
                 </div>
               </div>

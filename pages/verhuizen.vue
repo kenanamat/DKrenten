@@ -1,11 +1,19 @@
 <script setup lang="ts">
 const truck = ref<HTMLElement | null>(null)
 const { top } = useElementBounding(truck)
+const { width } = useWindowSize()
+
+const md = computed(() => width.value < 768)
+const roads = computed(() => (md.value ? 18 : 13))
 
 const truckPos = computed(() => {
-  if (top.value > 200) return "0"
-  else if (top.value < -340) return "550px"
-  else return String(-top.value + 220) + "px"
+  if (top.value > 360) return "0"
+  else if (md.value) {
+    if (top.value < -1120) return "1480px"
+  } else {
+    if (top.value < -660) return "1020px"
+  }
+  return String(-top.value + 360) + "px"
 })
 </script>
 
@@ -189,39 +197,65 @@ const truckPos = computed(() => {
       style="clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%)"
     ></div>
     <div class="flex justify-center bg-sky-100">
-      <div class="m-10 w-full max-w-[1440px] relative">
+      <div class="relative m-10 w-full max-w-[1440px]">
         <h2 class="text-primary mb-8 text-center text-4xl font-bold">
           Werkwijze
         </h2>
-        <ul class="grid md:grid-cols-2 z-10 relative gap-x-52">
-          <li>
-            <sub class="text-primary font-bold">Stap 1</sub>
-            <div class="rounded-xl bg-sky-50 p-4 shadow-xl h-32">
-              <h3 class="text-2xl font-bold">Aanvraag</h3>
-            </div>
-          </li>
-          <li class="mt-40">
-            <sub class="text-primary font-bold">Stap 2</sub>
-            <div class="rounded-xl bg-sky-50 p-4 shadow-xl h-32">
-              <h3 class="text-2xl font-bold">Aanvraag</h3>
-            </div>
-          </li>
+        <ul class="relative z-10 grid gap-x-52 md:grid-cols-2">
           <li class="">
-            <sub class="text-primary font-bold">Stap 3</sub>
-            <div class="rounded-xl bg-sky-50 p-4 shadow-xl h-32">
-              <h3 class="text-2xl font-bold">Aanvraag</h3>
+            <sub class="text-primary font-bold text-base">Stap 1</sub>
+            <div
+              class="flex mt-2 h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
+            >
+              <h3 class="mb-2 text-2xl font-bold">Aanvraag</h3>
+              <p class="text-sm">
+                Via onze website kunt u gratis berekenen wat de kosten zijn voor
+                uw verhuizing. U kunt per ruimte de inboedel doorgeven
+              </p>
             </div>
           </li>
-          <li class="mt-40">
-            <sub class="text-primary font-bold">Stap 4</sub>
-            <div class="rounded-xl bg-sky-50 p-4 shadow-xl h-32">
-              <h3 class="text-2xl font-bold">Aanvraag</h3>
+          <li class="mt-24 md:mt-60">
+            <sub class="text-primary text-base font-bold">Stap 2</sub>
+            <div
+              class="flex mt-2 h-52 flex-col text-center items-center justify-center rounded-xl bg-sky-50 p-4 shadow-xl"
+            >
+              <h3 class="text-2xl font-bold">Controleren</h3>
             </div>
           </li>
-          <li class="">
-            <sub class="text-primary font-bold">Stap 4</sub>
-            <div class="rounded-xl bg-sky-50 p-4 shadow-xl h-32">
-              <h3 class="text-2xl font-bold">Aanvraag</h3>
+          <li class="max-md:mt-24">
+            <sub class="text-primary font-bold text-base">Stap 3</sub>
+            <div
+              class="flex mt-2 h-52 flex-col text-center items-center justify-center rounded-xl bg-sky-50 p-4 shadow-xl"
+            >
+              <h3 class="text-2xl font-bold">Akkoord</h3>
+            </div>
+          </li>
+          <li class="mt-24 md:mt-60">
+            <sub class="text-primary font-bold text-base">Stap 4</sub>
+            <div
+              class="flex mt-2 h-52 flex-col text-center items-center justify-center rounded-xl bg-sky-50 p-4 shadow-xl"
+            >
+              <h3 class="mb-2 text-xl font-bold">Voorbereiding</h3>
+              <p class="text-sm">
+                Wij koppelen jouw transport aan de professionele koerier op de
+                weg. Jij ontvangt een e-mail met het tijdvak van 4 uur waarin de
+                koerier jouw spullen komt ophalen. Ook ontvang je de gegevens
+                van de koerier zodat jullie elkaar op de hoogte kunnen houden.
+              </p>
+            </div>
+          </li>
+          <li class="max-md:mt-24 max-md:mb-24">
+            <sub class="text-primary font-bold text-base">Stap 5</sub>
+            <div
+              class="flex mt-2 h-52 flex-col text-center items-center justify-center rounded-xl bg-sky-50 p-4 shadow-xl"
+            >
+              <h3 class="text-xl font-bold mb-2">Verhuisdag</h3>
+              <p class="text-sm">
+                Wij koppelen jouw transport aan de professionele koerier op de
+                weg. Jij ontvangt een e-mail met het tijdvak van 4 uur waarin de
+                koerier jouw spullen komt ophalen. Ook ontvang je de gegevens
+                van de koerier zodat jullie elkaar op de hoogte kunnen houden.
+              </p>
             </div>
           </li>
         </ul>
@@ -229,7 +263,7 @@ const truckPos = computed(() => {
           class="absolute top-12 left-[calc(50%-64px)] flex flex-col -space-y-8"
           ref="truck"
         >
-          <Icon v-for="_ in Array(8)" name="mdi:road" size="128" class="" />
+          <Icon v-for="_ in Array(roads)" name="mdi:road" size="128" class="" />
           <img
             src="/small-truck.png"
             alt=""
@@ -243,56 +277,6 @@ const truckPos = computed(() => {
       class="-mt-1 h-20 w-full bg-sky-100"
       style="clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%)"
     ></div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
   </main>
 </template>
