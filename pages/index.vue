@@ -36,17 +36,17 @@ const selectedRent = ref("lift")
                 <strong>direct inzage</strong> te krijgen over de kosten!
               </p>
             </div>
-            <div class="flex flex-wrap gap-8">
-              <Button :arrow="false" to="/verhuizen" class="bg-white text-lg !text-black hover:!text-white">
+            <div class="flex flex-wrap gap-8 max-md:max-w-md">
+              <Button :arrow="false" to="/verhuizen" class="bg-white text-lg !text-black hover:!text-white max-md:w-full">
                 Algehele verhuisservice
               </Button>
-              <div class="relative flex">
+              <div class="relative flex max-md:w-full">
                 <Button
                   :arrow="false"
-                  class="!p-0 text-lg hover:bg-transparent"
+                  class="!p-0 text-lg hover:bg-transparent max-md:w-full"
                 >
                   <div
-                    class="from-primary group relative flex rounded bg-gradient-to-r to-sky-300 px-6 py-4"
+                    class="from-primary group relative flex rounded bg-gradient-to-r to-sky-300 px-6 py-4 max-md:w-full"
                   >
                     <div class="z-10 flex items-center">
                       <Icon

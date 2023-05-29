@@ -6,4 +6,5 @@ import "./assets/_styles.css"
   <Notification />
   <Navigation />
   <NuxtPage />
+  <NaNek />
 </template>
