@@ -22,7 +22,7 @@
           <DisclosureButton
             class="flex w-full cursor-pointer pl-4 text-start !text-black"
           >
-            {{ question.q }}
+            <span class="pr-4">{{ question.q }}</span>
             <div class="relative ml-auto mr-4 h-8 w-4 font-extrabold">
               <div
                 :class="[

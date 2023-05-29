@@ -9,9 +9,9 @@ const roads = computed(() => (md.value ? 18 : 13))
 const truckPos = computed(() => {
   if (top.value > 360) return "0"
   else if (md.value) {
-    if (top.value < -1120) return "1480px"
+    if (top.value < -1185) return "1545px"
   } else {
-    if (top.value < -660) return "1020px"
+    if (top.value < -705) return "1065px"
   }
   return String(-top.value + 360) + "px"
 })
