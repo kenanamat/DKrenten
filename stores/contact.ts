@@ -5,7 +5,10 @@ export const useContactStore = defineStore("contact", () => {
     lastname = ref(""),
     email = ref(""),
     phone = ref(""),
-    message = ref("")
+    message = ref(""),
+    street = ref(""),
+    city = ref(""),
+    postcode = ref("")
 
   const reset = () => {
     name.value = ""
@@ -21,6 +24,9 @@ export const useContactStore = defineStore("contact", () => {
     email,
     phone,
     message,
-    reset
+    street,
+    city,
+    postcode,
+    reset,
   }
 })

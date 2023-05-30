@@ -2,63 +2,9 @@
 import { PhoneIcon } from "@heroicons/vue/24/outline"
 import { useContactStore } from "../stores/contact"
 import { useNotificationStore } from "../stores/notification"
-const provinces = ref({
-  "Noord-Holland": {
-    opened: false,
-    cities: [
-      "Naarden - Bussum",
-      "Amsterdam",
-      "Haarlem",
-      "Hoofddorp",
-      "Zaandam",
-      "Purmerend",
-      "Alkmaar",
-      "Hoorn",
-      "Beverwijk",
-      "Schagen",
-      "Enkhuizen",
-    ],
-  },
-  Flevoland: {
-    opened: false,
-    cities: ["Almere", "Zeewolde", "Lelystad", "Zwolle"],
-  },
-  "Zuid-Holland": {
-    opened: false,
-    cities: [
-      "Aalsmeer",
-      "Alphen aan den Rijn",
-      "Zoetermeer",
-      "Leiden",
-      "Den Haag",
-      "Rotterdam",
-      "Spijkenisse",
-      "Delft",
-      "Gouda",
-      "Dordrecht",
-      "Gorinchem",
-    ],
-  },
-  Utrecht: {
-    opened: false,
-    cities: [
-      "Breukelen",
-      "Utrecht",
-      "Hilversum",
-      "Amersfoort",
-      "Zeist",
-      "Houten",
-      "Nieuwegein",
-      "Ijselstein",
-      "Woerden",
-    ],
-  },
-})
+import { useProvinceStore } from "../stores/province"
 
-const getCityArr = (province: keyof typeof provinces.value) => {
-  if (provinces.value[province].opened) return provinces.value[province].cities
-  else return provinces.value[province].cities.slice(0, 4)
-}
+const { provinces, getCityArr } = useProvinceStore()
 
 const contactStore = useContactStore()
 const notification = useNotificationStore()
@@ -121,7 +67,7 @@ const sendEmail = async () => {
                   href="tel:(+31) 657991999"
                 >
                   <div
-                    class="from-primary group relative flex h-full rounded-full bg-transparent bg-gradient-to-l to-sky-300 px-6 py-2 font-bold text-white shadow-md"
+                    class="from-primary group relative flex h-full rounded-full bg-transparent bg-gradient-to-l to-sky-300 px-6 py-4 font-bold text-white shadow-md"
                   >
                     <div class="z-10 flex items-center gap-x-4">
                       <dt class="flex-none">

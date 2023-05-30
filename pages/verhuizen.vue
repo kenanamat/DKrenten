@@ -1,21 +1,4 @@
-<script setup lang="ts">
-const truck = ref<HTMLElement | null>(null)
-const { top } = useElementBounding(truck)
-const { width } = useWindowSize()
-
-const md = computed(() => width.value < 768)
-const roads = computed(() => (md.value ? 18 : 13))
-
-const truckPos = computed(() => {
-  if (top.value > 360) return "0"
-  else if (md.value) {
-    if (top.value < -1185) return "1545px"
-  } else {
-    if (top.value < -705) return "1065px"
-  }
-  return String(-top.value + 360) + "px"
-})
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <main>
@@ -23,13 +6,15 @@ const truckPos = computed(() => {
       class="relative flex min-h-screen justify-center bg-slate-200 pt-36 shadow-xl"
     >
       <div class="z-10 m-10 max-w-[1440px] xl:-mb-6">
-        <div class="relative sm:mt-16 grid gap-16 lg:grid-cols-5 xl:grid-cols-12">
+        <div
+          class="relative grid gap-16 sm:mt-16 lg:grid-cols-5 xl:grid-cols-12"
+        >
           <div class="lg:col-span-3 xl:col-span-6">
             <div class="mb-12">
               <h1 class="mb-6">
                 <span class="block text-2xl font-bold"> DKrenten is </span>
                 <span class="text-4xl font-bold">
-                  Een verhuisbedrijf waar jij bepaald
+                  Een verhuisbedrijf waar jij bepaalt
                 </span>
               </h1>
               <p class="mb-8 mt-6">
@@ -40,16 +25,11 @@ const truckPos = computed(() => {
                 natuurlijk onbeschadigd overgebracht worden. Een verhuizing kan
                 dus veel zorgen met zich meebrengen, maar dat hoeft niet!
               </p>
-              <p>
-                Als verhuisbedrijf helpen we je bij DKrenten transport om
-                zorgeloos over te gaan naar jouw nieuwe woning. Maar, bij ons
-                bepaal jij hoe we jou helpen. Je kan bij ons namelijk
-                gemakkelijk jouw verhuis service zelf samenstellen. Jij weet
-                tenslotte toch het beste hoe wij jou het beste kunnen helpen.
-                Kies overzichtelijk van welke diensten je gebruik wilt maken en
-                je krijg direct een duidelijk overzicht te zien van de kosten,
-                wel zo makkelijk toch?
-              </p>
+            </div>
+            <div class="flex flex-wrap gap-8 max-md:max-w-md">
+              <Button to="/verhuizen" class="text-lg max-md:w-full">
+                Bereken uw verhuiskosten!
+              </Button>
             </div>
           </div>
           <div class="col-span-2 hidden xl:block"></div>
@@ -81,7 +61,26 @@ const truckPos = computed(() => {
                 </div>
               </div>
               <div class="rounded-b-3xl bg-white px-10 py-8">
-                <HomeForm />
+                <p class="font-bold">
+                  Als verhuisbedrijf helpen we je bij DKrenten transport om
+                  zorgeloos over te gaan naar jouw nieuwe woning. Maar!
+                </p>
+                <p class="my-4">
+                  Bij ons bepaal jij hoe we jou helpen. Je kan bij ons namelijk
+                  gemakkelijk jouw verhuis service zelf samenstellen. Jij weet
+                  tenslotte toch het beste hoe wij jou het beste kunnen helpen.
+                </p>
+                <Button
+                  href="https://dkverhuizingen.nl/offerte/"
+                  class="my-8 md:mr-16"
+                >
+                  Bekijk je mogelijkheden!
+                </Button>
+                <p class="my-4">
+                  Kies overzichtelijk van welke diensten je gebruik wilt maken
+                  en je krijg direct een duidelijk overzicht te zien van de
+                  kosten, wel zo makkelijk toch?
+                </p>
               </div>
             </div>
             <ul class="mt-8 mb-16">
@@ -113,8 +112,8 @@ const truckPos = computed(() => {
           </div>
         </div>
         <img
-          class="my-20 md:w-[55%] lg:mb-32 lg:-mt-[29rem]"
-          src="/verhuislift-cutout.png"
+          class="my-20 md:w-[60%] lg:mb-32 lg:-mt-[29rem]"
+          src="/white-truck-trans.png"
           alt="DKrenten truck"
         />
       </div>
@@ -133,7 +132,7 @@ const truckPos = computed(() => {
           </p>
         </div>
         <hr class="mx-auto mt-8 mb-14 w-80" />
-        <div class="flex flex-wrap gap-12 justify-evenly">
+        <div class="flex flex-wrap justify-evenly gap-12">
           <div
             class="flex w-96 flex-col justify-between rounded-3xl bg-gradient-to-b from-sky-50 to-transparent p-10"
           >
@@ -150,7 +149,9 @@ const truckPos = computed(() => {
                 op de juiste plek.
               </p>
             </div>
-            <Button>Bereken uw verhuiskosten!</Button>
+            <Button href="https://dkverhuizingen.nl/offerte/"
+              >Bereken uw verhuiskosten!</Button
+            >
           </div>
           <div
             class="flex w-96 flex-col justify-between rounded-3xl bg-gradient-to-b from-sky-50 to-transparent p-10"
@@ -168,7 +169,9 @@ const truckPos = computed(() => {
                 enzv.
               </p>
             </div>
-            <Button>Bereken uw verhuiskosten!</Button>
+            <Button href="https://dkverhuizingen.nl/offerte/"
+              >Bereken uw verhuiskosten!</Button
+            >
           </div>
           <div
             class="flex w-96 flex-col justify-between rounded-3xl bg-gradient-to-b from-sky-50 to-transparent p-10"
@@ -187,92 +190,52 @@ const truckPos = computed(() => {
                 plek komen te staan.
               </p>
             </div>
-            <Button>Bereken uw verhuiskosten!</Button>
+            <Button href="https://dkverhuizingen.nl/offerte/"
+              >Bereken uw verhuiskosten!</Button
+            >
           </div>
         </div>
       </div>
     </div>
     <div
-      class="mt-20 h-20 w-full bg-sky-100"
+      class="mt-20 -mb-1 h-20 w-full bg-sky-100"
       style="clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%)"
     ></div>
     <div class="flex justify-center bg-sky-100">
-      <div class="relative m-2 sm:m-10 w-full max-w-[1440px]">
-        <h2 class="text-primary mb-8 text-center text-4xl font-bold">
+      <div class="relative m-2 w-full max-w-[1440px] sm:m-10">
+        <h2 class="text-primary mb-8 text-4xl font-bold">
           Werkwijze
         </h2>
-        <ul class="relative z-10 grid gap-x-52 md:grid-cols-2">
-          <li class="">
-            <sub class="text-primary text-base font-bold">Stap 1</sub>
-            <div
-              class="mt-2 flex h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
-            >
-              <h3 class="mb-2 text-2xl font-bold">Aanvraag</h3>
-              <p class="text-sm">
-                Via onze website kunt u gratis berekenen wat de kosten zijn voor
-                uw verhuizing. U kunt per ruimte de inboedel doorgeven
-              </p>
-            </div>
-          </li>
-          <li class="mt-24 md:mt-60">
-            <sub class="text-primary text-base font-bold">Stap 2</sub>
-            <div
-              class="mt-2 flex h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
-            >
-              <h3 class="text-2xl font-bold">Controleren</h3>
-            </div>
-          </li>
-          <li class="max-md:mt-24">
-            <sub class="text-primary text-base font-bold">Stap 3</sub>
-            <div
-              class="mt-2 flex h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
-            >
-              <h3 class="text-2xl font-bold">Akkoord</h3>
-            </div>
-          </li>
-          <li class="mt-24 md:mt-60">
-            <sub class="text-primary text-base font-bold">Stap 4</sub>
-            <div
-              class="mt-2 flex h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
-            >
-              <h3 class="mb-2 text-xl font-bold">Voorbereiding</h3>
-              <p class="text-sm">
-                Wij koppelen jouw transport aan de professionele koerier op de
-                weg. Jij ontvangt een e-mail met het tijdvak van 4 uur waarin de
-                koerier jouw spullen komt ophalen. Ook ontvang je de gegevens
-                van de koerier zodat jullie elkaar op de hoogte kunnen houden.
-              </p>
-            </div>
-          </li>
-          <li class="max-md:mt-24 max-md:mb-24">
-            <sub class="text-primary text-base font-bold">Stap 5</sub>
-            <div
-              class="mt-2 flex h-52 flex-col items-center justify-center rounded-xl bg-sky-50 p-4 text-center shadow-xl"
-            >
-              <h3 class="mb-2 text-xl font-bold">Verhuisdag</h3>
-              <p class="text-sm">
-                Wij koppelen jouw transport aan de professionele koerier op de
-                weg. Jij ontvangt een e-mail met het tijdvak van 4 uur waarin de
-                koerier jouw spullen komt ophalen. Ook ontvang je de gegevens
-                van de koerier zodat jullie elkaar op de hoogte kunnen houden.
-              </p>
-            </div>
-          </li>
-        </ul>
-        <div
-          class="absolute top-12 left-[calc(50%-64px)] flex flex-col -space-y-8"
-          ref="truck"
-        >
-          <Icon v-for="_ in Array(roads)" name="mdi:road" size="128" class="" />
-          <img
-            src="/small-truck.png"
-            alt=""
-            class="absolute left-0 top-12 ml-6 w-20 translate-y-3 transition-none md:transition-all md:duration-500 md:ease-linear"
-            :style="`transform: translateY(${truckPos}) rotate(180deg); `"
-          />
-        </div>
+        <Steps
+          :steps="[
+            {
+              title: 'Aanvraag',
+              body: 'Via onze website kunt u gratis berekenen wat de kosten zijn voor uw verhuizing. U kunt per ruimte de inboedel doorgeven',
+            },
+            {
+              title: 'Controleren',
+            },
+            {
+              title: 'Akkoord',
+            },
+            {
+              title: 'Voorbereiding',
+              body: 'Wij koppelen jouw transport aan de professionele koerier op de weg. Jij ontvangt een e-mail met het tijdvak van 4 uur waarin de koerier jouw spullen komt ophalen. Ook ontvang je de gegevens van de koerier zodat jullie elkaar op de hoogte kunnen houden.',
+            },
+            {
+              title: 'Verhuisdag',
+              body: 'Wij koppelen jouw transport aan de professionele koerier op de weg. Jij ontvangt een e-mail met het tijdvak van 4 uur waarin de koerier jouw spullen komt ophalen. Ook ontvang je de gegevens van de koerier zodat jullie elkaar op de hoogte kunnen houden.',
+            },
+          ]"
+        />
       </div>
     </div>
+    <div
+      class="-mt-1 h-20 w-full bg-sky-100 -z-10"
+      style="clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%)"
+    ></div>
+
+    <Map />
 
     <FAQ />
   </main>

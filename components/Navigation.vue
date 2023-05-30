@@ -55,7 +55,10 @@ const scroll = useWindowScroll().y
         </NuxtLink>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <Button class="bg-primary py-6 gap-6 font-bold [&>svg]:ring-white [&>svg]:ring-opacity-20 rounded-md text-white shadow">
+        <Button
+          :arrow="false"
+          class="bg-primary gap-6 rounded-md px-12 py-6 text-lg font-bold text-white shadow [&>svg]:ring-white [&>svg]:ring-opacity-20"
+        >
           Verhuislift huren!
         </Button>
       </div>
@@ -97,7 +100,10 @@ const scroll = useWindowScroll().y
                 >
               </div>
               <div class="py-6">
-                <Button class="bg-primary py-6 font-bold [&>svg]:ring-white [&>svg]:ring-opacity-20 rounded-md text-white shadow">
+                <Button
+                  :arrow="false"
+                  class="bg-primary px-8 rounded-md py-6 font-bold text-white shadow [&>svg]:ring-white [&>svg]:ring-opacity-20"
+                >
                   Verhuislift huren!
                 </Button>
               </div>

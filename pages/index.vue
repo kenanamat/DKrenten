@@ -17,7 +17,9 @@ const selectedRent = ref("lift")
       class="relative flex min-h-screen justify-center bg-slate-200 pt-36 shadow-xl"
     >
       <div class="z-10 m-10 max-w-[1440px] xl:-mb-6">
-        <div class="relative sm:mt-16 grid gap-16 lg:grid-cols-5 xl:grid-cols-12">
+        <div
+          class="relative grid gap-16 sm:mt-16 lg:grid-cols-5 xl:grid-cols-12"
+        >
           <div class="lg:col-span-3 xl:col-span-6">
             <div class="mb-12">
               <h1 class="mb-6">
@@ -116,7 +118,7 @@ const selectedRent = ref("lift")
         </div>
         <img
           class="my-20 md:w-[60%] lg:mb-32 lg:-mt-[29rem]"
-          src="/white-truck-trans.png"
+          src="/verhuislift-cutout.png"
           alt="DKrenten truck"
         />
       </div>
@@ -139,11 +141,11 @@ const selectedRent = ref("lift")
       </div>
     </div>
     <div
-      class="mt-20 h-20 w-full bg-sky-100"
+      class="mt-20 -mb-1 h-20 w-full bg-sky-100"
       style="clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%)"
     ></div>
     <div class="flex justify-center bg-sky-100">
-      <div class="m-2 sm:m-10 w-full max-w-[1440px]">
+      <div class="m-2 w-full max-w-[1440px] sm:m-10">
         <div
           class="grid items-center justify-between lg:grid-cols-12 lg:gap-20"
         >
@@ -163,17 +165,15 @@ const selectedRent = ref("lift")
               <h3 class="text-primary mt-14 mb-10 text-3xl font-bold">
                 Een verhuislift kan je gebruiken voor:
               </h3>
-              <div
-                class="grid grid-cols-2 justify-between gap-10 md:grid-cols-4"
-              >
+              <div class="grid grid-cols-2 gap-10 md:grid-cols-4">
                 <div
-                  class="flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
+                  class="flex flex-col items-center gap-4 justify-self-end rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
                 >
                   <img class="max-h-30" src="/truck.png" alt="Verhuizen" />
                   <span class="text-center text-xl font-bold">Verhuizen</span>
                 </div>
                 <div
-                  class="flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
+                  class="flex flex-col items-center gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
                 >
                   <img class="max-h-30" src="/solar.png" alt="Zonnepanelen" />
                   <span class="text-center text-xl font-bold"
@@ -181,7 +181,7 @@ const selectedRent = ref("lift")
                   >
                 </div>
                 <div
-                  class="flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
+                  class="flex flex-col items-center gap-4 justify-self-end rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
                 >
                   <img
                     class="max-h-30"
@@ -191,7 +191,7 @@ const selectedRent = ref("lift")
                   <span class="text-center text-xl font-bold">Witgoed</span>
                 </div>
                 <div
-                  class="flex flex-col items-center justify-end gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
+                  class="flex flex-col items-center gap-4 rounded-xl bg-sky-50 p-6 pb-3 shadow-md max-md:w-36"
                 >
                   <img class="max-h-30" src="/wardrobe.png" alt="Meubels" />
                   <span class="text-center text-xl font-bold">Meubels</span>
@@ -398,7 +398,7 @@ const selectedRent = ref("lift")
               +
             </div>
             <div
-              class="to-primary rounded-xl bg-gradient-to-b from-sky-300 p-2 sm:p-10 text-white shadow-md"
+              class="to-primary rounded-xl bg-gradient-to-b from-sky-300 p-2 text-white shadow-md sm:p-10"
             >
               <div>
                 <h3 class="mb-6 text-2xl font-bold">Extra toeslagen</h3>
@@ -432,7 +432,7 @@ const selectedRent = ref("lift")
                 <h3 class="mb-6 text-2xl font-bold">Extra service</h3>
                 <ul class="flex flex-wrap gap-8">
                   <li
-                    class="flex flex-col max-sm:w-full gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md md:flex-row"
+                    class="flex flex-col gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md max-sm:w-full md:flex-row"
                   >
                     <div
                       class="h-52 w-full bg-[url('/verhuisbus.jpeg')] bg-cover max-md:rounded-t-xl md:h-auto md:w-44 md:rounded-l-xl"
@@ -452,10 +452,10 @@ const selectedRent = ref("lift")
                     </div>
                   </li>
                   <li
-                    class="flex flex-col max-sm:w-full gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md md:flex-row"
+                    class="flex flex-col gap-8 rounded-xl bg-sky-100 text-sky-800 shadow-md max-sm:w-full md:flex-row"
                   >
                     <div
-                      class="h-52 w-full bg-[url('/verhuizer2.jpeg')] bg-cover max-md:rounded-t-xl md:h-auto md:w-44 md:rounded-l-xl bg-center"
+                      class="h-52 w-full bg-[url('/verhuizer2.jpeg')] bg-cover bg-center max-md:rounded-t-xl md:h-auto md:w-44 md:rounded-l-xl"
                     ></div>
                     <div class="max-w-[260px] max-md:px-8 md:py-8">
                       <h4 class="mb-1 text-lg font-extrabold">
@@ -479,6 +479,39 @@ const selectedRent = ref("lift")
         </div>
       </div>
     </div>
+    <div
+      class="mt-20 -mb-1 h-20 w-full bg-sky-100"
+      style="clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%)"
+    ></div>
+    <div class="flex justify-center bg-sky-100">
+      <div class="relative m-2 w-full max-w-[1440px] sm:m-10">
+        <h2 class="text-primary mb-8 text-4xl font-bold">
+          Verhuislift boeken in 3 stappen
+        </h2>
+        <Steps
+          :steps="[
+            {
+              title: 'Kies',
+              body: 'Kies een pakket en reserveer een lift',
+            },
+            {
+              title: 'Controleren',
+              body: 'Wij controleren uw aanvraag en bevestigen uw aanvraag',
+            },
+            {
+              title: 'Onderweg!',
+              body: 'Onze lift operator is onderweg',
+            },
+          ]"
+        />
+      </div>
+    </div>
+    <div
+      class="-mt-1 h-20 w-full bg-sky-100"
+      style="clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%)"
+    ></div>
+    
+    <Map />
 
     <FAQ />
   </main>
