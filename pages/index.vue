@@ -1,6 +1,11 @@
 <script setup lang="ts">
 const selectedRent = ref("lift")
 
+useSeoMeta({
+  title: 'DKrenten Transport | Verhuislift',
+  ogTitle: 'DKrenten Transport | Verhuislift',
+})
+
 // const { data } = await useAsyncData("user", () => $fetch("/api/user", {
 //   method: 'post',
 //   body: {

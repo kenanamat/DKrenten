@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useSeoMeta({
+  title: 'DKrenten Transport | Verhuizen',
+  ogTitle: 'DKrenten Transport | Verhuizen',
+})
+</script>
 
 <template>
   <main>

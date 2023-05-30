@@ -34,6 +34,11 @@ const sendEmail = async () => {
   }
   contactStore.reset()
 }
+
+useSeoMeta({
+  title: 'DKrenten Transport | Contact',
+  ogTitle: 'DKrenten Transport | Contact',
+})
 </script>
 
 <template>
