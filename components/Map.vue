@@ -79,7 +79,7 @@ const activeProvince = ref("")
             ]"
           />
           <img
-            src="/Flevoland.png"
+            src="/flevoland.png"
             alt=""
             class="absolute transition-all duration-300 ease-in-out"
             :class="[
