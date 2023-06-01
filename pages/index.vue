@@ -2,8 +2,8 @@
 const selectedRent = ref("lift")
 
 useSeoMeta({
-  title: 'DKrenten Transport | Verhuislift',
-  ogTitle: 'DKrenten Transport | Verhuislift',
+  title: "DKrenten Transport | Verhuislift",
+  ogTitle: "DKrenten Transport | Verhuislift",
 })
 
 // const { data } = await useAsyncData("user", () => $fetch("/api/user", {
@@ -18,120 +18,66 @@ useSeoMeta({
 
 <template>
   <main>
-    <div
-      class="relative flex min-h-screen justify-center bg-slate-200 pt-36 shadow-xl"
-    >
-      <div class="z-10 m-10 max-w-[1440px] xl:-mb-6">
-        <div
-          class="relative grid gap-16 sm:mt-16 lg:grid-cols-5 xl:grid-cols-12"
+    <Hero>
+      <template #title>
+        <span class="block text-2xl font-bold">
+          Zware of te grote spullen omhoog?
+        </span>
+        <span class="text-5xl font-bold">Goedkoop met een verhuislift!</span>
+      </template>
+      <template #body>
+        Bent u op zoek naar een betrouwbare en professionele verhuisservice?
+        Zoek niet verder! DKrenten is er om u te helpen. Onze vriendelijke en
+        behulpzame medewerkers staan klaar om uw verhuizing snel en efficiënt
+        uit te voeren. Gebruik onze tool om
+        <strong>direct inzage</strong> te krijgen over de kosten!
+      </template>
+      <template #buttons>
+        <Button
+          :arrow="false"
+          to="/verhuizen"
+          class="bg-white text-lg !text-black hover:!text-white max-md:w-full"
         >
-          <div class="lg:col-span-3 xl:col-span-6">
-            <div class="mb-12">
-              <h1 class="mb-6">
-                <span class="block text-2xl font-bold">
-                  Zware of te grote spullen omhoog?
+          Algehele verhuisservice
+        </Button>
+        <div class="relative flex max-md:w-full">
+          <Button
+            :arrow="false"
+            class="!p-0 text-lg hover:bg-transparent max-md:w-full"
+          >
+            <div
+              class="from-primary group relative flex rounded bg-gradient-to-r to-sky-300 px-6 py-4 max-md:w-full"
+            >
+              <div class="z-10 flex items-center">
+                <Icon name="mdi:tow-truck" size="40" class="[&>*]:fill-white" />
+                <span class="ml-4">
+                  Een verhuislift huren (inc. operator)
                 </span>
-                <span class="text-5xl font-bold">
-                  Goedkoop met een verhuislift!
-                </span>
-              </h1>
-              <p class="mb-8 mt-6">
-                Bent u op zoek naar een betrouwbare en professionele
-                verhuisservice? Zoek niet verder! DKrenten is er om u te helpen.
-                Onze vriendelijke en behulpzame medewerkers staan klaar om uw
-                verhuizing snel en efficiënt uit te voeren. Gebruik onze tool om
-                <strong>direct inzage</strong> te krijgen over de kosten!
-              </p>
-            </div>
-            <div class="flex flex-wrap gap-8 max-md:max-w-md">
-              <Button
-                :arrow="false"
-                to="/verhuizen"
-                class="bg-white text-lg !text-black hover:!text-white max-md:w-full"
-              >
-                Algehele verhuisservice
-              </Button>
-              <div class="relative flex max-md:w-full">
-                <Button
-                  :arrow="false"
-                  class="!p-0 text-lg hover:bg-transparent max-md:w-full"
-                >
-                  <div
-                    class="from-primary group relative flex rounded bg-gradient-to-r to-sky-300 px-6 py-4 max-md:w-full"
-                  >
-                    <div class="z-10 flex items-center">
-                      <Icon
-                        name="mdi:tow-truck"
-                        size="40"
-                        class="[&>*]:fill-white"
-                      />
-                      <span class="ml-4">
-                        Een verhuislift huren (inc. operator)
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="to-primary absolute left-0 top-0 h-full w-full rounded bg-gradient-to-r from-sky-300 opacity-0 transition-all duration-500 group-hover:opacity-100"
-                  ></div>
-                </Button>
               </div>
             </div>
-          </div>
-          <div class="col-span-2 hidden xl:block"></div>
-          <div class="lg:col-span-2 xl:col-span-4">
-            <div class="rounded-3xl bg-sky-100 shadow-xl">
-              <div class="px-10 py-8">
-                <h2 class="text-2xl font-bold">Gemakkelijk een verhuislift!</h2>
-                <div class="mt-6 space-y-2">
-                  <span
-                    class="flex w-64 items-center gap-2 rounded-full bg-sky-50 px-4 py-2 text-sm shadow"
-                  >
-                    <Icon
-                      name="material-symbols:price-change-rounded"
-                      size="26"
-                      class="[&>*]:fill-primary"
-                    />
-                    Volledig inzicht van de prijs!
-                  </span>
-                  <span
-                    class="flex w-64 items-center gap-2 rounded-full bg-sky-50 px-4 py-2 text-sm shadow"
-                  >
-                    <Icon
-                      name="material-symbols:lock-open-rounded"
-                      size="26"
-                      class="[&>*]:fill-primary"
-                    />
-                    Nergens aan vast!
-                  </span>
-                </div>
-              </div>
-              <div class="rounded-b-3xl bg-white px-10 py-8">
-                <HomeForm />
-              </div>
-            </div>
-            <iframe
-              title="beoordeling"
-              id="rating"
-              frameborder="1"
-              allowtransparency="true"
-              src="https://www.klantenvertellen.nl/retrieve-widget.html?color=white&allowTransparency=true&button=true&lang=nl&tenantId=99&locationId=1068031"
-              width="400"
-              height="222"
-              class="mt-10 w-full"
-            ></iframe>
-          </div>
+            <div
+              class="to-primary absolute left-0 top-0 h-full w-full rounded bg-gradient-to-r from-sky-300 opacity-0 transition-all duration-500 group-hover:opacity-100"
+            ></div>
+          </Button>
         </div>
-        <img
-          class="my-20 md:w-[60%] lg:mb-32 lg:-mt-[29rem]"
-          src="/verhuislift-cutout.png"
-          alt="DKrenten truck"
-        />
-      </div>
-      <div
-        class="bg-primary absolute bottom-0 right-0 h-20 w-full min-w-[1920px]"
-        style="clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%)"
-      ></div>
-    </div>
+      </template>
+      <template #right>
+        <HeroBlock>
+          <HomeForm />
+        </HeroBlock>
+        <iframe
+          title="beoordeling"
+          id="rating"
+          frameborder="1"
+          allowtransparency="true"
+          src="https://www.klantenvertellen.nl/retrieve-widget.html?color=white&allowTransparency=true&button=true&lang=nl&tenantId=99&locationId=1068031"
+          width="400"
+          height="222"
+          class="mt-10 w-full"
+        ></iframe>
+      </template>
+    </Hero>
+
     <div class="my-16 flex justify-center">
       <div class="m-10 w-full max-w-[1440px]">
         <div class="mx-auto max-w-xl text-center text-slate-600">
@@ -515,7 +461,7 @@ useSeoMeta({
       class="-mt-1 h-20 w-full bg-sky-100"
       style="clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 60%)"
     ></div>
-    
+
     <Map />
 
     <FAQ />
