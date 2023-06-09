@@ -1,3 +1,9 @@
+<script setup lang="ts">
+defineProps<{
+  img?: string
+}>()
+</script>
+
 <template>
   <div
     class="relative flex min-h-screen justify-center bg-slate-200 pt-36 shadow-xl"
@@ -24,8 +30,8 @@
       </div>
       <img
         class="my-20 md:w-[60%] lg:mb-32 lg:-mt-[29rem]"
-        src="/verhuislift-cutout.png"
-        alt="DKrenten verhuislift"
+        :src="img"
+        alt="Header plaatje"
       />
     </div>
     <div

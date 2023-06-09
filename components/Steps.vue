@@ -49,7 +49,7 @@ const truckPos = computed(() => {
     <img
       src="/small-truck.png"
       alt=""
-      class="absolute left-0 top-12 ml-6 w-20 translate-y-3 transition-none md:transition-all md:duration-300 md:ease-linear"
+      class="absolute left-0 top-12 ml-6 w-20 translate-y-3 transition-none md:transition-all md:duration-500 md:ease-linear"
       :style="`transform: translateY(${truckPos}) rotate(180deg); `"
     />
   </div>

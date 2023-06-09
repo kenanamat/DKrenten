@@ -1,7 +1,13 @@
+<script setup lang="ts">
+defineProps<{
+  title: string
+}>()
+</script>
+
 <template>
   <div class="rounded-3xl bg-sky-100 shadow-xl">
     <div class="px-10 py-8">
-      <h2 class="text-2xl font-bold">Gemakkelijk een verhuislift!</h2>
+      <h2 class="text-2xl font-bold" v-html="title" />
       <div class="mt-6 space-y-2">
         <span
           class="flex w-64 items-center gap-2 rounded-full bg-sky-50 px-4 py-2 text-sm shadow"
