@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useContactStore } from '~/stores/contact';
+import { useContactStore } from "~/stores/contact"
 
 const contactStore = useContactStore()
 </script>
@@ -81,29 +81,8 @@ const contactStore = useContactStore()
       </div>
     </div>
 
-    <div class="pt-5">
-      <div class="flex justify-end gap-x-3">
-        <!-- <Button
-          type="submit"
-          class="bg-primary text-white [&>svg]:ring-white [&>svg]:ring-opacity-20 [&>svg]:scale-75 rounded py-2"
-        >
-          Bekijk je opties!
-        </Button> -->
-        <Button
-          type="submit"
-          :arrow="false"
-          class="relative !p-0 font-bold text-white shadow-md hover:bg-transparent"
-        >
-          <div
-            class="from-primary group relative flex rounded bg-gradient-to-r to-sky-300 px-6 py-4"
-          >
-            <div class="z-10 flex items-center">Bekijk de mogelijkheden!</div>
-          </div>
-          <div
-            class="to-primary absolute left-0 top-0 h-full w-full rounded bg-gradient-to-r from-sky-300 opacity-0 transition-all duration-500 group-hover:opacity-100"
-          ></div>
-        </Button>
-      </div>
+    <div class="flex justify-end gap-x-3 pt-5">
+      <ButtonGradient type="submit"> Bekijk de mogelijkheden! </ButtonGradient>
     </div>
   </form>
 </template>

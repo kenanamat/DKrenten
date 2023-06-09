@@ -1,58 +1,3 @@
-<template>
-  <div
-    class="mt-20 -mb-1 h-20 w-full bg-sky-100 z-10"
-    style="clip-path: polygon(0 0, 100% 60%, 100% 100%, 0% 100%)"
-  ></div>
-  <div class="flex justify-center bg-sky-100 py-16">
-    <div class="m-2 w-full max-w-[1440px] sm:m-10">
-      <h2 class="text-primary mb-4 text-4xl font-bold">Veelgestelde vragen</h2>
-      <p class="mt-4 mb-12 text-base leading-7 text-gray-600">
-        Kan je het antwoord dat je zoekt niet vinden? Neem snel
-        <NuxtLink to="/contact" class="text-primary rounded-full font-bold"
-          >contact op</NuxtLink
-        >
-        met ons!
-      </p>
-      <dl class="space-y-4 text-xl font-bold">
-        <Disclosure
-          as="dt"
-          v-slot="{ open }"
-          v-for="(question, i) in questions"
-          :key="i"
-          class="rounded-xl bg-sky-50 py-8 shadow-md"
-        >
-          <DisclosureButton
-            class="flex w-full cursor-pointer items-center pl-4 text-start !text-black"
-          >
-            <span class="pr-4">{{ question.q }}</span>
-            <div class="relative ml-auto mr-4 h-8 w-4 font-extrabold">
-              <div
-                :class="[
-                  'bg-primary absolute top-0 h-8 w-1 transition-all duration-200 ease-in-out',
-                  open && 'rotate-90',
-                ]"
-              ></div>
-              <div class="bg-primary absolute top-0 h-8 w-1 rotate-90"></div>
-            </div>
-          </DisclosureButton>
-          <Transition
-            enter-from-class="opacity-0 max-h-0 !mt-0 !pt-0"
-            enter-to-class="opacity-100 max-h-[1000px]"
-            leave-from-class="opacity-100 max-h-[1000px]"
-            leave-to-class="opacity-0 max-h-0 !mt-0 !pt-0"
-          >
-            <DisclosurePanel
-              as="dd"
-              v-html="question.a"
-              class="ml-3 mt-4 mr-3 border-t pt-4 text-base font-normal transition-all duration-200 ease-in-out"
-            />
-          </Transition>
-        </Disclosure>
-      </dl>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue"
 
@@ -83,3 +28,52 @@ const questions = [
   },
 ]
 </script>
+
+<template>
+  <SectionBackground :slantBottom="false">
+    <h2 class="text-primary mb-4 text-4xl font-bold">Veelgestelde vragen</h2>
+    <p class="mt-4 mb-12 text-base leading-7 text-gray-600">
+      Kan je het antwoord dat je zoekt niet vinden? Neem snel
+      <NuxtLink to="/contact" class="text-primary rounded-full font-bold"
+        >contact op</NuxtLink
+      >
+      met ons!
+    </p>
+    <dl class="mb-16 space-y-4 text-xl font-bold">
+      <Disclosure
+        as="dt"
+        v-slot="{ open }"
+        v-for="(question, i) in questions"
+        :key="i"
+        class="rounded-xl bg-sky-50 py-8 shadow-md"
+      >
+        <DisclosureButton
+          class="flex w-full cursor-pointer items-center pl-4 text-start !text-black"
+        >
+          <span class="pr-4">{{ question.q }}</span>
+          <div class="relative ml-auto mr-4 h-8 w-4 font-extrabold">
+            <div
+              :class="[
+                'bg-primary absolute top-0 h-8 w-1 transition-all duration-200 ease-in-out',
+                open && 'rotate-90',
+              ]"
+            ></div>
+            <div class="bg-primary absolute top-0 h-8 w-1 rotate-90"></div>
+          </div>
+        </DisclosureButton>
+        <Transition
+          enter-from-class="opacity-0 max-h-0 !mt-0 !pt-0"
+          enter-to-class="opacity-100 max-h-[1000px]"
+          leave-from-class="opacity-100 max-h-[1000px]"
+          leave-to-class="opacity-0 max-h-0 !mt-0 !pt-0"
+        >
+          <DisclosurePanel
+            as="dd"
+            v-html="question.a"
+            class="ml-3 mt-4 mr-3 border-t pt-4 text-base font-normal transition-all duration-200 ease-in-out"
+          />
+        </Transition>
+      </Disclosure>
+    </dl>
+  </SectionBackground>
+</template>

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const scroll = useWindowScroll().y
+</script>
+
 <template>
   <div
     class="group fixed bottom-0 right-0 z-50 p-1 font-bold text-white transition-all"
@@ -26,7 +30,3 @@
     </a>
   </div>
 </template>
-
-<script setup lang="ts">
-const scroll = useWindowScroll().y
-</script>
