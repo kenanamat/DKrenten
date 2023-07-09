@@ -40,7 +40,7 @@ useSeoMeta({
         >
           Algehele verhuisservice
         </Button>
-        <ButtonGradient class="text-lg max-md:w-full">
+        <ButtonGradient class="text-lg max-md:w-full" href="https://dkrenten.nl/">
           <Icon name="mdi:tow-truck" size="40" class="[&>*]:fill-white" />
           <span class="ml-4">Een verhuislift huren (inc. operator)</span>
         </ButtonGradient>
@@ -206,16 +206,16 @@ useSeoMeta({
         <PriceBlock
           title="Snel service"
           highlight
-          :price="90"
+          :price="95"
           :possibilities="[
-            '3 objecten / 30 minuten',
+            '2 objecten',
             'Tot en met 9e etage',
             'Inclusief operator',
           ]"
         />
         <PriceBlock
           title="1 uur service"
-          :price="110"
+          :price="125"
           :possibilities="[
             '± 10 tot 12 objecten (10m3)',
             'Vergelijkbaar met vol busje (PostNL formaat)',
@@ -226,7 +226,7 @@ useSeoMeta({
         />
         <PriceBlock
           title="2 uur service"
-          :price="179"
+          :price="186"
           :possibilities="[
             '± 20 tot 24 objecten (20m3)',
             'Vergelijkbaar met grotere bakwagen',
@@ -236,8 +236,8 @@ useSeoMeta({
           icon="material-symbols:clock-loader-40"
         />
         <PriceBlock
-          title="3 - 4 uur service"
-          :price="265"
+          title="3 uur service"
+          :price="279"
           :possibilities="[
             'Noodzakelijk bij +24 objecten (25m3)',
             'Noodzakelijk als je op 2 locaties de verhuislift inzet',
@@ -256,40 +256,40 @@ useSeoMeta({
           title="Snel service"
           :price="105"
           :possibilities="[
-            '3 objecten / 30 minuten',
-            'Tot en met 9e etage',
+            '2 objecten',
+            'Tot en met 4e etage',
             'Inclusief operator',
           ]"
         />
         <PriceBlock
           title="1 uur service"
-          :price="125"
+          :price="135"
           :possibilities="[
             '± 10 tot 12 objecten (10m3)',
             'Vergelijkbaar met vol busje (PostNL formaat)',
-            'Tot en met 9e etage',
+            'Tot en met 4e etage',
             'Inclusief operator',
           ]"
           icon="material-symbols:clock-loader-10"
         />
         <PriceBlock
-          :price="185"
+          :price="196"
           title="2 uur service"
           :possibilities="[
             '± 20 tot 24 objecten (20m3)',
             'Vergelijkbaar met grotere bakwagen',
-            'Tot en met 9e etage',
+            'Tot en met 4e etage',
             'Inclusief operator',
           ]"
           icon="material-symbols:clock-loader-40"
         />
         <PriceBlock
           :price="269"
-          title="3 - 4 uur service"
+          title="3 uur service"
           :possibilities="[
             'Noodzakelijk bij +24 objecten (25m3)',
             'Noodzakelijk als je op 2 locaties de verhuislift inzet',
-            'Tot en met 9e etage',
+            'Tot en met 4e etage',
             'Inclusief operator',
           ]"
           icon="material-symbols:clock-loader-90"
@@ -345,14 +345,14 @@ useSeoMeta({
                 <h4 class="mb-1 text-lg font-extrabold">Verhuisbus</h4>
                 <p class="text-sm">
                   U kunt een verhuisbus (inhoud 21m3) huren inclusief verhuizer
-                  vanaf €70 per uur. Standaard inbegrepen zijn verhuisdekens,
+                  vanaf €85 per uur. Standaard inbegrepen zijn verhuisdekens,
                   spanbanden & 2 hondjes
                 </p>
               </div>
               <div
                 class="m-4 mt-auto h-fit rounded-xl bg-sky-50 p-4 text-lg font-bold shadow-md md:my-auto"
               >
-                € 70,- p/uur
+                € 85,- p/uur
               </div>
             </li>
             <li

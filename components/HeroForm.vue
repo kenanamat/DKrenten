@@ -82,7 +82,7 @@ const contactStore = useContactStore()
     </div>
 
     <div class="flex justify-end gap-x-3 pt-5">
-      <ButtonGradient type="submit"> Bekijk de mogelijkheden! </ButtonGradient>
+      <ButtonGradient href="https://dkrenten.nl/" type="submit"> Bekijk de mogelijkheden! </ButtonGradient>
     </div>
   </form>
 </template>
