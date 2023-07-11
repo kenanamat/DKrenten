@@ -46,16 +46,20 @@ withDefaults(
       >
       <span class="text-7xl">{{ price }}</span>
     </div>
-    <button
+    <Button
+      href="https://dkrenten.nl/"
+      :arrow="false"
       :class="{ '!bg-sky-800': highlight }"
-      class="bg-primary mb-6 w-full rounded-xl p-3 text-xl font-bold text-slate-100 shadow-md"
+      class="bg-primary mb-6 w-full !justify-center rounded-xl p-3 text-xl font-bold text-slate-100 shadow-md"
     >
       Huur de service
-    </button>
+    </Button>
     <div :class="{ 'text-white': highlight }" class="">
       <h4 class="mb-2 font-bold">Mogelijkheden met service:</h4>
-      <ul class="ml-5 space-y-2 list-disc">
-        <li v-for="(item, index) in possibilities" :key="index" class="">{{ item }}</li>
+      <ul class="ml-5 list-disc space-y-2">
+        <li v-for="(item, index) in possibilities" :key="index" class="">
+          {{ item }}
+        </li>
       </ul>
     </div>
   </div>
