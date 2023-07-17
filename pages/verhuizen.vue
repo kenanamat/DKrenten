@@ -178,5 +178,7 @@ useSeoMeta({
     <Map />
 
     <FAQ />
+
+    <ContactButtons />
   </main>
 </template>
