@@ -29,6 +29,7 @@ defineProps<{
         </div>
       </div>
       <img
+        v-if="img"
         class="my-20 md:w-[60%] lg:mb-32 lg:-mt-[29rem]"
         :src="img"
         alt="Header plaatje"
