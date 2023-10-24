@@ -15,7 +15,7 @@ useSeoMeta({
   ogImage: "https://www.dkrenten.nl/verhuislift-cutout.png",
 })
 
-const shutdown = true
+const shutdown = false
 </script>
 
 <template>
