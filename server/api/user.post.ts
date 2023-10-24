@@ -6,8 +6,8 @@ export default defineEventHandler(async (event) => {
   const { id, name } = await readBody(event)
   const user = await prisma.user.create({
     data: {
-    id: null,
-      name: name
+      id: null,
+      name: name,
     },
   })
   return user
