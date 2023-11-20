@@ -95,7 +95,7 @@ const scroll = useWindowScroll().y
                 >
               </div>
               <div class="py-6">
-                <ButtonGradient href="https://dkrenten.nl/" class="text-lg">
+                <ButtonGradient href="#" class="text-lg">
                   Verhuislift huren!
                 </ButtonGradient>
               </div>

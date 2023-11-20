@@ -42,7 +42,7 @@ useSeoMeta({
         </Button>
         <ButtonGradient
           class="text-lg max-md:w-full"
-          href="https://dkrenten.nl/"
+          href="#"
         >
           <Icon name="mdi:tow-truck" size="40" class="[&>*]:fill-white" />
           <span class="ml-4">Een verhuislift huren (inc. operator)</span>
@@ -50,7 +50,9 @@ useSeoMeta({
       </template>
       <template #right>
         <HeroBlock title="Gemakkelijk een verhuislift">
-          <HeroForm />
+          <ClientOnly>
+            <ReuzenPanda />
+          </ClientOnly>
         </HeroBlock>
         <iframe
           title="beoordeling"

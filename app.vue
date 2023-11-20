@@ -24,7 +24,7 @@ const shutdown = false
     <Navigation />
     <NuxtPage />
   </template>
-  <Hero class="!min-h-0 h-screen -mt-6 [&>div]:-mb-6" v-else>
+  <Hero class="-mt-6 h-screen !min-h-0 [&>div]:-mb-6" v-else>
     <template #title>
       <div class="flex flex-wrap items-center">
         <Icon

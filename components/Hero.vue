@@ -10,8 +10,8 @@ defineProps<{
   >
     <div class="z-10 m-10 max-w-[1440px] xl:-mb-6">
       <div class="relative grid gap-16 sm:mt-16 lg:grid-cols-5 xl:grid-cols-12">
-        <div class="lg:col-span-3 xl:col-span-6">
-          <div class="mb-12">
+        <div class="lg:col-span-3 xl:col-span-5">
+          <div class="pb-6 mb-6 bg-slate-200 rounded-2xl">
             <h1 class="mb-6">
               <slot name="title"></slot>
             </h1>
@@ -19,12 +19,12 @@ defineProps<{
               <slot name="body"></slot>
             </p>
           </div>
-          <div class="flex flex-wrap gap-8 max-md:max-w-md">
+          <div class="flex flex-wrap gap-4 max-md:max-w-md">
             <slot name="buttons"></slot>
           </div>
         </div>
         <div class="col-span-2 hidden xl:block"></div>
-        <div class="lg:col-span-2 xl:col-span-4">
+        <div class="lg:col-span-2 xl:col-span-5">
           <slot name="right"></slot>
         </div>
       </div>

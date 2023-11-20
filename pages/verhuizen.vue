@@ -29,7 +29,7 @@ useSeoMeta({
       </template>
       <template #right>
         <HeroBlock title="Plan je verhuizing!">
-          <p class="font-bold">
+          <!-- <p class="font-bold">
             Als verhuisbedrijf helpen we je bij DKrenten transport om zorgeloos
             over te gaan naar jouw nieuwe woning. Maar!
           </p>
@@ -48,7 +48,10 @@ useSeoMeta({
             Kies overzichtelijk van welke diensten je gebruik wilt maken en je
             krijg direct een duidelijk overzicht te zien van de kosten, wel zo
             makkelijk toch?
-          </p>
+          </p> -->
+          <ClientOnly>
+            <ReuzenPanda />
+          </ClientOnly>
         </HeroBlock>
         <ul class="mt-8 mb-16">
           <li
@@ -102,7 +105,7 @@ useSeoMeta({
               op de juiste plek.
             </p>
           </div>
-          <Button href="https://dkverhuizingen.nl/offerte/"
+          <Button href="#"
             >Bereken uw verhuiskosten!</Button
           >
         </div>
@@ -121,7 +124,7 @@ useSeoMeta({
               DKrenten Transport. Denk aan koelkast, wasmachine, hoekbank enzv.
             </p>
           </div>
-          <Button href="https://dkverhuizingen.nl/offerte/"
+          <Button href="#"
             >Bereken uw verhuiskosten!</Button
           >
         </div>
@@ -142,7 +145,7 @@ useSeoMeta({
               komen te staan.
             </p>
           </div>
-          <Button href="https://dkverhuizingen.nl/offerte/"
+          <Button href="#"
             >Bereken uw verhuiskosten!</Button
           >
         </div>

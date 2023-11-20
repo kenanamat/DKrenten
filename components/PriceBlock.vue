@@ -47,7 +47,7 @@ withDefaults(
       <span class="text-7xl">{{ price }}</span>
     </div>
     <Button
-      href="https://dkrenten.nl/"
+      href="#"
       :arrow="false"
       :class="{ '!bg-sky-800': highlight }"
       class="bg-primary mb-6 w-full !justify-center rounded-xl p-3 text-xl font-bold text-slate-100 shadow-md"

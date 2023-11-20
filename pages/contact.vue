@@ -98,7 +98,7 @@ useSeoMeta({
                 </dt>
               </div>
             </dl>
-            <div class="mt-16">
+            <!-- <div class="mt-16">
               <ul class="grid gap-8 sm:grid-cols-2">
                 <li v-for="(cities, province) in provinces" :key="province">
                   <ul class="">
@@ -125,7 +125,7 @@ useSeoMeta({
                   </ul>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="mx-6 lg:pl-8">
@@ -134,7 +134,11 @@ useSeoMeta({
             alt=""
             class="ml-auto -mb-4 max-h-52 -scale-x-100 lg:mt-32"
           />
-          <form
+          <div class="rounded-xl bg-slate-100 pt-20 pb-24 shadow-md sm:mb-32 lg:py-10 lg:px-8">
+            <h3 class="text-xl font-bold">Email ons!</h3>
+            <a href="mailto:info@dkrententransport.nl" class="text-3xl underline mt-4 text-primary tracking-wider">info@dkrententransport.nl</a>  
+          </div>
+          <!-- <form
             @submit.prevent="sendEmail"
             class="rounded-xl bg-slate-100 pt-20 pb-24 shadow-md sm:mb-32 lg:py-16 lg:px-8"
           >
@@ -231,7 +235,7 @@ useSeoMeta({
                 </Button>
               </div>
             </div>
-          </form>
+          </form> -->
         </div>
       </div>
     </div>
