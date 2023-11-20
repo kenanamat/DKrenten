@@ -1,9 +1,16 @@
 <template>
-  <div v-if="show" class="absolute h-full w-full inset-0 flex animate-bounce items-center justify-center">
-    <CubeTransparentIcon class="animate-spin h-20 w-20 text-primary" />
-  </div>  
   <div
-    class="reuzenpanda-widget-from-js-snippet !relative !h-[560px] !w-full [&>iframe]:!relative [&>iframe]:!w-full z-10 flex justify-center items-center"
+    class="absolute inset-0 flex animate-pulse items-center justify-center bg-sky-50"
+  >
+    <div class="mx-auto flex h-96 animate-bounce items-center">
+      <div class="border-primary rounded-full border-4 p-4">
+        <CubeTransparentIcon class="text-primary h-16 w-16 animate-spin" />
+      </div>
+    </div>
+  </div>
+  <div
+    class="reuzenpanda-widget-from-js-snippet !relative z-10 flex !h-[560px] !w-full items-center justify-center bg-transparent transition-all duration-300 [&>iframe]:!relative [&>iframe]:!w-full"
+    :class="[!show && '!bg-white']"
   />
   <!-- <a
     href="https://offerte.directsamenstellen.nl/_configure?widget=2d2c2ed3-ff3b-4d2a-8ba7-1f32e423dc02"
@@ -22,28 +29,43 @@
 </template>
 
 <script setup>
-import { CubeTransparentIcon } from '@heroicons/vue/20/solid';
+import { CubeTransparentIcon } from "@heroicons/vue/20/solid"
 
 const show = ref(true)
-setTimeout(() => {show.value = false}, 2000)
+setTimeout(() => {
+  show.value = false
+  if (
+    document.getElementsByTagName("iframe")[0]?.id !=
+    "reuzenpanda-reuzenpandaWidget-iframe"
+  ) {
+    loadWidget()
+  }
+}, 2000)
 
-const scriptId = "reuzenpanda-widget-from-js-snippet"
-const existingScript = document.getElementById(scriptId)
-if (existingScript) {
-  existingScript.remove()
-}
-
-const script = document.createElement("script")
-script.id = scriptId
-script.src = "https://snippetjs.reuzenpanda.nl"
-
-script.onload = async () => {
-  await reuzenpandaWidget.load("2d2c2ed3-ff3b-4d2a-8ba7-1f32e423dc02", scriptId)
+const loadWidget = async () => {
+  await reuzenpandaWidget.load(
+    "2d2c2ed3-ff3b-4d2a-8ba7-1f32e423dc02",
+    "reuzenpanda-widget-from-js-snippet"
+  )
   await reuzenpandaWidget.open()
 }
 
-const firstScriptTag = document.getElementsByTagName("script")[0]
-firstScriptTag.parentNode.insertBefore(script, firstScriptTag)
+const insertScript = () => {
+  const scriptId = "reuzenpanda-widget-from-js-snippet"
+  if (document.getElementById(scriptId)) {
+    loadWidget()
+    document.getElementsByTagName("script")[0].remove()
+    document.getElementById(scriptId).remove()
+  }
 
-// console.log(firstScriptTag)
+  const script = document.createElement("script")
+  script.id = scriptId
+  script.src = "https://snippetjs.reuzenpanda.nl"
+  script.onload = loadWidget
+
+  const firstScriptTag = document.getElementsByTagName("script")[0]
+  firstScriptTag.parentNode.insertBefore(script, firstScriptTag)
+}
+
+insertScript()
 </script>

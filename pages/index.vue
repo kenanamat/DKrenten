@@ -40,10 +40,7 @@ useSeoMeta({
         >
           Algehele verhuisservice
         </Button>
-        <ButtonGradient
-          class="text-lg max-md:w-full"
-          href="#"
-        >
+        <ButtonGradient class="text-lg max-md:w-full" href="#">
           <Icon name="mdi:tow-truck" size="40" class="[&>*]:fill-white" />
           <span class="ml-4">Een verhuislift huren (inc. operator)</span>
         </ButtonGradient>

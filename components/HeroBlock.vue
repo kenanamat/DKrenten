@@ -31,7 +31,7 @@ defineProps<{
         </span>
       </div>
     </div>
-    <div class="rounded-b-3xl bg-white relative overflow-hidden">
+    <div class="rounded-b-3xl bg-white relative overflow-hidden min-h-[560px]">
       <slot></slot>
     </div>
   </div>

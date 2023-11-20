@@ -105,9 +105,7 @@ useSeoMeta({
               op de juiste plek.
             </p>
           </div>
-          <Button href="#"
-            >Bereken uw verhuiskosten!</Button
-          >
+          <Button href="#">Bereken uw verhuiskosten!</Button>
         </div>
         <div
           class="flex w-96 flex-col justify-between rounded-3xl bg-gradient-to-b from-sky-50 to-transparent p-10"
@@ -124,9 +122,7 @@ useSeoMeta({
               DKrenten Transport. Denk aan koelkast, wasmachine, hoekbank enzv.
             </p>
           </div>
-          <Button href="#"
-            >Bereken uw verhuiskosten!</Button
-          >
+          <Button href="#">Bereken uw verhuiskosten!</Button>
         </div>
         <div
           class="flex w-96 flex-col justify-between rounded-3xl bg-gradient-to-b from-sky-50 to-transparent p-10"
@@ -145,9 +141,7 @@ useSeoMeta({
               komen te staan.
             </p>
           </div>
-          <Button href="#"
-            >Bereken uw verhuiskosten!</Button
-          >
+          <Button href="#">Bereken uw verhuiskosten!</Button>
         </div>
       </div>
     </Section>
