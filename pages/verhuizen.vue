@@ -28,7 +28,7 @@ useSeoMeta({
         </Button>
       </template>
       <template #right>
-        <HeroBlock title="Plan je verhuizing!">
+        <HeroBlock title="Plan je verhuizing!" noHeight>
           <!-- <p class="font-bold">
             Als verhuisbedrijf helpen we je bij DKrenten transport om zorgeloos
             over te gaan naar jouw nieuwe woning. Maar!
