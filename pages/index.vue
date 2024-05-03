@@ -46,10 +46,10 @@ useSeoMeta({
         </ButtonGradient>
       </template>
       <template #right>
-        <HeroBlock title="Gemakkelijk een verhuislift">
-          <ClientOnly>
+        <HeroBlock title="Gemakkelijk een verhuislift" noHeight>
+          <!-- <ClientOnly>
             <ReuzenPanda />
-          </ClientOnly>
+          </ClientOnly> -->
         </HeroBlock>
         <iframe
           title="beoordeling"
@@ -59,7 +59,7 @@ useSeoMeta({
           src="https://www.klantenvertellen.nl/retrieve-widget.html?color=white&allowTransparency=true&button=true&lang=nl&tenantId=99&locationId=1068031"
           width="400"
           height="222"
-          class="mt-10 w-full"
+          class="mt-10 w-full lg:mb-[560px]"
         />
       </template>
     </Hero>

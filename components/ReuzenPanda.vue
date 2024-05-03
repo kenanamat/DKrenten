@@ -9,11 +9,11 @@
     </div>
   </div>
   <div
-    class="reuzenpanda-widget-from-js-snippet !relative z-10 flex !h-[560px] !w-full items-center justify-center bg-transparent transition-all duration-300 [&>iframe]:!relative [&>iframe]:!w-full"
+    class="reuzenpanda-widget-from-js-snippet !relative z-30 flex !h-[560px] !w-full items-center justify-center bg-transparent transition-all duration-300 [&>iframe]:!relative [&>iframe]:!w-full"
     :class="[!show && '!bg-white']"
   />
   <!-- <a
-    href="https://offerte.directsamenstellen.nl/_configure?widget=2d2c2ed3-ff3b-4d2a-8ba7-1f32e423dc02"
+    href="https://offerte.directsamenstellen.nl/_configure?widget=3c20f21e-da08-4c0e-8361-d5417b47fb52"
     target="_blank"
     style="color: rgba(0, 0, 0, 0)"
   >
@@ -32,7 +32,7 @@
 import { CubeTransparentIcon } from "@heroicons/vue/20/solid"
 
 const show = ref(true)
-setTimeout(() => {
+onMounted(() => {
   show.value = false
   if (
     document.getElementsByTagName("iframe")[0]?.id !=
@@ -40,11 +40,11 @@ setTimeout(() => {
   ) {
     loadWidget()
   }
-}, 2000)
+})
 
 const loadWidget = async () => {
   await reuzenpandaWidget.load(
-    "2d2c2ed3-ff3b-4d2a-8ba7-1f32e423dc02",
+    "3c20f21e-da08-4c0e-8361-d5417b47fb52",
     "reuzenpanda-widget-from-js-snippet"
   )
   await reuzenpandaWidget.open()

@@ -4,7 +4,7 @@ const scroll = useWindowScroll().y
 
 <template>
   <div
-    class="group fixed bottom-0 right-0 z-50 p-1 font-bold text-white transition-all"
+    class="group fixed bottom-20 right-0 z-50 p-1 font-bold text-white transition-all"
     :class="[scroll > 300 && 'translate-x-16 hover:translate-x-36']"
   >
     <a

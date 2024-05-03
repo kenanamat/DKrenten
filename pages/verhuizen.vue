@@ -28,7 +28,7 @@ useSeoMeta({
         </Button>
       </template>
       <template #right>
-        <HeroBlock title="Plan je verhuizing!">
+        <HeroBlock title="Plan je verhuizing!" no-height>
           <!-- <p class="font-bold">
             Als verhuisbedrijf helpen we je bij DKrenten transport om zorgeloos
             over te gaan naar jouw nieuwe woning. Maar!
@@ -49,11 +49,11 @@ useSeoMeta({
             krijg direct een duidelijk overzicht te zien van de kosten, wel zo
             makkelijk toch?
           </p> -->
-          <ClientOnly>
+          <!-- <ClientOnly>
             <ReuzenPanda />
-          </ClientOnly>
+          </ClientOnly> -->
         </HeroBlock>
-        <ul class="mt-8 mb-16">
+        <ul class="mt-8 mb-16 lg:mb-[560px]">
           <li
             class="flex items-center justify-between gap-2 rounded-full bg-sky-50 px-10 py-4 shadow-md"
           >

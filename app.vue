@@ -44,4 +44,5 @@ const shutdown = false
     </template>
   </Hero>
   <NaNek />
+  <QuotationFooter />
 </template>
