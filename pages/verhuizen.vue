@@ -49,9 +49,9 @@ useSeoMeta({
             krijg direct een duidelijk overzicht te zien van de kosten, wel zo
             makkelijk toch?
           </p> -->
-          <ClientOnly>
+          <!-- <ClientOnly>
             <ReuzenPanda />
-          </ClientOnly>
+          </ClientOnly> -->
         </HeroBlock>
         <ul class="mt-8 mb-16">
           <li
@@ -175,7 +175,5 @@ useSeoMeta({
     <Map />
 
     <FAQ />
-
-    <ContactButtons />
   </main>
 </template>

@@ -43,5 +43,10 @@ const shutdown = false
       </div>
     </template>
   </Hero>
+  <ContactButtons />
   <NaNek />
+
+  <ClientOnly>
+    <ReuzenPanda />
+  </ClientOnly>
 </template>

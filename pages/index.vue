@@ -46,11 +46,11 @@ useSeoMeta({
         </ButtonGradient>
       </template>
       <template #right>
-        <HeroBlock title="Gemakkelijk een verhuislift">
-          <ClientOnly>
+        <HeroBlock title="Gemakkelijk een verhuislift" noHeight />
+          <!-- <ClientOnly>
             <ReuzenPanda />
           </ClientOnly>
-        </HeroBlock>
+        </HeroBlock> -->
         <iframe
           title="beoordeling"
           id="rating"
@@ -406,7 +406,5 @@ useSeoMeta({
     <Map />
 
     <FAQ />
-
-    <ContactButtons />
   </main>
 </template>

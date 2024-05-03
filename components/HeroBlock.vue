@@ -1,11 +1,18 @@
 <script setup lang="ts">
-defineProps<{
-  title: string
-}>()
+withDefaults(
+  defineProps<{
+    title: string
+    noHeight: boolean
+  }>(),
+  { noHeight: false }
+)
 </script>
 
 <template>
-  <div class="rounded-3xl bg-sky-100 shadow-xl">
+  <div
+    class="rounded-3xl bg-sky-100 shadow-xl"
+    :class="[noHeight ? 'lg:mb-[560px]' : '']"
+  >
     <div class="px-10 py-8">
       <h2 class="text-2xl font-bold" v-html="title" />
       <div class="mt-6 space-y-2">
@@ -31,7 +38,10 @@ defineProps<{
         </span>
       </div>
     </div>
-    <div class="rounded-b-3xl bg-white relative overflow-hidden min-h-[560px]">
+    <div
+      class="relative overflow-hidden rounded-b-3xl bg-white"
+      :class="[noHeight ? '' : 'min-h-[560px]']"
+    >
       <slot></slot>
     </div>
   </div>

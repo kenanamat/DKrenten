@@ -55,7 +55,7 @@ const scroll = useWindowScroll().y
         </NuxtLink>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <ButtonGradient class="text-xl"> Verhuislift huren! </ButtonGradient>
+        <!-- <ButtonGradient class="text-xl"> Verhuislift huren! </ButtonGradient> -->
       </div>
     </nav>
     <ClientOnly>
@@ -95,9 +95,9 @@ const scroll = useWindowScroll().y
                 >
               </div>
               <div class="py-6">
-                <ButtonGradient href="#" class="text-lg">
+                <!-- <ButtonGradient href="#" class="text-lg">
                   Verhuislift huren!
-                </ButtonGradient>
+                </ButtonGradient> -->
               </div>
             </div>
           </div>
